@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LearningPlatform.Properties
+namespace FIleUploadForm.Properties
 {
 
 
