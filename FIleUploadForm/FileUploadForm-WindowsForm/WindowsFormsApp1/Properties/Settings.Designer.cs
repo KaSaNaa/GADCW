@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FIleUploadForm.Properties
+namespace WindowsFormsApp1.Properties
 {
 
 
