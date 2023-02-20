@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.IO;
+using System.Linq.Expressions;
 
 namespace WindowsFormsApp1
 {
@@ -47,25 +48,31 @@ namespace WindowsFormsApp1
 
         private void Btn_Upload_Click(object sender, EventArgs e)
         {
-            try
+            if (textBox1.Text.Length != 0)
             {
-                // Insert the file data into the database
-                SqlCommand command = new SqlCommand("INSERT INTO documents (document) VALUES (@Name)", con);
-                command.Parameters.AddWithValue("@Name", Path.GetFileName(textBox1.Text));
+                try
+                {
+                    // Insert the file data into the database
+                    SqlCommand command = new SqlCommand("INSERT INTO documents (document) VALUES (@Name)", con);
+                    command.Parameters.AddWithValue("@Name", Path.GetFileName(textBox1.Text));
 
-                con.Open();
-                
+                    con.Open();
+
                     int i = command.ExecuteNonQuery();
-                    if (i==1)
+                    if (i == 1)
                     {
-                        MessageBox.Show("Data added successfully!", "Upload Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Data added successfully!", "Upload Success", MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
                     }
+
                     con.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error uploading file: " + ex.Message);
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error uploading file: " + ex.Message);
-            }
+            else MessageBox.Show("Please select a file to upload!", "No file selected", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }
