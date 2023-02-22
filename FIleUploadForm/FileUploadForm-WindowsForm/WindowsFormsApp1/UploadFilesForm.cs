@@ -7,9 +7,9 @@ using System.Linq.Expressions;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form1 : Form
+    public partial class UploadFilesForm : Form
     {
-        public Form1()
+        public UploadFilesForm()
         {
             InitializeComponent();
         }
