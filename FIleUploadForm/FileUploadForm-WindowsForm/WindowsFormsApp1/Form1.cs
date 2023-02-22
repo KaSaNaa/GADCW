@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.IO;
@@ -20,11 +14,11 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-LC7RQ4G;Initial Catalog = LearningPlatform;Integrated Security = True");
+        Database db = new Database();
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -48,31 +42,58 @@ namespace WindowsFormsApp1
 
         private void Btn_Upload_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text.Length != 0)
+            if (string.IsNullOrEmpty(textBox1.Text))
             {
-                try
+                MessageBox.Show("Please select a file to upload!", "No file selected", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                return;
+            }
+
+            string fileName = Path.GetFileName(textBox1.Text);
+
+            try
+            {
+                // Check if the file already exists in the database
+                SqlCommand selectCommand =
+                    new SqlCommand("SELECT COUNT(*) FROM documents WHERE document = @Name", db.con);
+                selectCommand.Parameters.AddWithValue("@Name", fileName);
+
+                db.OpenConnection();
+                int count = (int)selectCommand.ExecuteScalar();
+
+                if (count > 0)
                 {
-                    // Insert the file data into the database
-                    SqlCommand command = new SqlCommand("INSERT INTO documents (document) VALUES (@Name)", con);
-                    command.Parameters.AddWithValue("@Name", Path.GetFileName(textBox1.Text));
-
-                    con.Open();
-
-                    int i = command.ExecuteNonQuery();
-                    if (i == 1)
-                    {
-                        MessageBox.Show("Data added successfully!", "Upload Success", MessageBoxButtons.OK,
-                            MessageBoxIcon.Information);
-                    }
-
-                    con.Close();
+                    MessageBox.Show("The selected file already exists in the database. Please select a different file or rename it.",
+                        "File already exists", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
-                catch (Exception ex)
+
+                // Insert the file data into the database
+                SqlCommand insertCommand = new SqlCommand("INSERT INTO documents (document) VALUES (@Name)", db.con);
+                insertCommand.Parameters.AddWithValue("@Name", fileName);
+
+                int rowsAffected = insertCommand.ExecuteNonQuery();
+
+                if (rowsAffected == 1)
                 {
-                    MessageBox.Show("Error uploading file: " + ex.Message);
+                    MessageBox.Show("Data added successfully!", "Upload Success", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("No data was added. Please try again.", "Upload Failed", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
                 }
             }
-            else MessageBox.Show("Please select a file to upload!", "No file selected", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error uploading file: " + ex.Message);
+            }
+            finally
+            {
+                db.CloseConnection();
+            }
         }
+
     }
 }
