@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WindowsFormsApp1
 {
@@ -12,7 +7,7 @@ namespace WindowsFormsApp1
     {
         internal SqlConnection con;
         private SqlCommand cmd;
-        private SqlDataAdapter da;
+        internal SqlDataAdapter da;
 
         public Database() // Default Constructor
         {
@@ -30,20 +25,20 @@ namespace WindowsFormsApp1
             con.Close();
         }
 
-        public int save_update_delete(string query)
+        public int SQLCommand(string query)
         {
             OpenConnection();
             cmd = new SqlCommand(query, con);
-            int i = cmd.ExecuteNonQuery();
+            var i = cmd.ExecuteNonQuery();
             CloseConnection();
             return i;
         }
 
-        public DataTable GetData(string a)
+        public DataTable GetDataTable(string a)
         {
             OpenConnection();
             da = new SqlDataAdapter(a, con);
-            DataTable dt = new DataTable();
+            var dt = new DataTable();
             da.Fill(dt);
             CloseConnection();
             return dt;

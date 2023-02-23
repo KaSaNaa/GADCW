@@ -14,12 +14,10 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        Database db = new Database();
+        Database _db = new Database();
 
         private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
+        { }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -49,17 +47,17 @@ namespace WindowsFormsApp1
                 return;
             }
 
-            string fileName = Path.GetFileName(textBox1.Text);
+            var fileName = Path.GetFileName(textBox1.Text);
 
             try
             {
                 // Check if the file already exists in the database
                 SqlCommand selectCommand =
-                    new SqlCommand("SELECT COUNT(*) FROM documents WHERE document = @Name", db.con);
+                    new SqlCommand("SELECT COUNT(*) FROM documents WHERE document = @Name", _db.con);
                 selectCommand.Parameters.AddWithValue("@Name", fileName);
 
-                db.OpenConnection();
-                int count = (int)selectCommand.ExecuteScalar();
+                _db.OpenConnection();
+                var count = (int)selectCommand.ExecuteScalar();
 
                 if (count > 0)
                 {
@@ -69,10 +67,10 @@ namespace WindowsFormsApp1
                 }
 
                 // Insert the file data into the database
-                SqlCommand insertCommand = new SqlCommand("INSERT INTO documents (document) VALUES (@Name)", db.con);
+                SqlCommand insertCommand = new SqlCommand("INSERT INTO documents (document) VALUES (@Name)", _db.con);
                 insertCommand.Parameters.AddWithValue("@Name", fileName);
 
-                int rowsAffected = insertCommand.ExecuteNonQuery();
+                var rowsAffected = insertCommand.ExecuteNonQuery();
 
                 if (rowsAffected == 1)
                 {
@@ -91,9 +89,8 @@ namespace WindowsFormsApp1
             }
             finally
             {
-                db.CloseConnection();
+                _db.CloseConnection();
             }
         }
-
     }
 }

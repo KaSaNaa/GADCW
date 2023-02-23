@@ -1,49 +1,59 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Microsoft.SqlServer.Types;
 
 namespace WindowsFormsApp1
 {
     public partial class ViewFilesForm : Form
     {
+        private readonly Timer _timer = new Timer(); //instantiated a timer 
         public ViewFilesForm()
         {
             InitializeComponent();
+            _timer.Interval = 2000; // 2 seconds
+            _timer.Tick += Timer_Tick;
+            _timer.Start();
         }
-        Database db = new Database();
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            ReloadData();
+        }
+
+        readonly Database _db = new Database();
         
         private void Form2_Load(object sender, EventArgs e)
         {
-            db.OpenConnection();
+            // TODO: This line of code loads data into the 'learningPlatformDataSet2.documents' table. You can move, or remove it, as needed.
+            this.documentsTableAdapter.Fill(this.learningPlatformDataSet2.documents);
+            ReloadData();
+        }
+
+        private void ReloadData()
+        {
+            _db.OpenConnection();
             try
             {
-                // Select all records from the documents table
-                string query = "SELECT * FROM documents";
-                SqlCommand command = new SqlCommand(query, db.con);
+                // select all records from the documents table
+                var query = "SELECT * FROM documents";
+                var cmd = new SqlCommand(query, _db.con);
 
-                // Create a DataTable to hold the query results
+                // create a DataTable to hold the query results
                 DataTable dataTable = new DataTable();
 
-                // Use a SqlDataAdapter to fill the DataTable
-                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                // use a SqlAdapter to fill the data table
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 adapter.Fill(dataTable);
 
-                // Set the DataSource property of the DataGridView control to the DataTable
+                // set the data source property of the DataGridView control to the DataTable
                 DocumentTableView.DataSource = dataTable;
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
-            db.CloseConnection();
+            _db.CloseConnection();
         }
 
         private void Btn_Uploadfile_Click(object sender, EventArgs e)
