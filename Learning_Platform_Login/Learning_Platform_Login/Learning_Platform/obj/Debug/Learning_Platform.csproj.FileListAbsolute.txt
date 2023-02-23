@@ -1,0 +1,57 @@
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Learning_Platform\Learning_Platform\bin\Debug\Learning_Platform.exe.config
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Learning_Platform\Learning_Platform\bin\Debug\Learning_Platform.exe
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Learning_Platform\Learning_Platform\bin\Debug\Learning_Platform.pdb
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Learning_Platform\Learning_Platform\bin\Debug\MetroFramework.Design.dll
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Learning_Platform\Learning_Platform\bin\Debug\MetroFramework.dll
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Learning_Platform\Learning_Platform\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Learning_Platform\Learning_Platform\obj\Debug\Learning_Platform.csproj.AssemblyReference.cache
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Learning_Platform\Learning_Platform\obj\Debug\Learning_Platform.csproj.SuggestedBindingRedirects.cache
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Learning_Platform\Learning_Platform\obj\Debug\Learning_Platform.Properties.Resources.resources
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Learning_Platform\Learning_Platform\obj\Debug\Learning_Platform.User_Type.resources
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Learning_Platform\Learning_Platform\obj\Debug\Learning_Platform.csproj.GenerateResource.cache
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Learning_Platform\Learning_Platform\obj\Debug\Learning_Platform.csproj.CoreCompileInputs.cache
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Learning_Platform\Learning_Platform\obj\Debug\Learning_Platform.csproj.CopyComplete
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Learning_Platform\Learning_Platform\obj\Debug\Learning_Platform.exe
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Learning_Platform\Learning_Platform\obj\Debug\Learning_Platform.pdb
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Learning_Platform\Learning_Platform\obj\Debug\Learning_Platform.Sign_In_Student.resources
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Windows Form\Learning_Platform\Learning_Platform\bin\Debug\Learning_Platform.exe.config
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Windows Form\Learning_Platform\Learning_Platform\bin\Debug\Learning_Platform.exe
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Windows Form\Learning_Platform\Learning_Platform\bin\Debug\Learning_Platform.pdb
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Windows Form\Learning_Platform\Learning_Platform\bin\Debug\MetroFramework.Design.dll
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Windows Form\Learning_Platform\Learning_Platform\bin\Debug\MetroFramework.dll
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Windows Form\Learning_Platform\Learning_Platform\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Windows Form\Learning_Platform\Learning_Platform\obj\Debug\Learning_Platform.csproj.AssemblyReference.cache
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Windows Form\Learning_Platform\Learning_Platform\obj\Debug\Learning_Platform.csproj.SuggestedBindingRedirects.cache
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Windows Form\Learning_Platform\Learning_Platform\obj\Debug\Learning_Platform.Properties.Resources.resources
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Windows Form\Learning_Platform\Learning_Platform\obj\Debug\Learning_Platform.Sign_In_Lecturer.resources
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Windows Form\Learning_Platform\Learning_Platform\obj\Debug\Learning_Platform.Sign_In_Student.resources
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Windows Form\Learning_Platform\Learning_Platform\obj\Debug\Learning_Platform.User_Type.resources
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Windows Form\Learning_Platform\Learning_Platform\obj\Debug\Learning_Platform.csproj.GenerateResource.cache
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Windows Form\Learning_Platform\Learning_Platform\obj\Debug\Learning_Platform.csproj.CoreCompileInputs.cache
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Windows Form\Learning_Platform\Learning_Platform\obj\Debug\Learning_Platform.csproj.CopyComplete
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Windows Form\Learning_Platform\Learning_Platform\obj\Debug\Learning_Platform.exe
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Windows Form\Learning_Platform\Learning_Platform\obj\Debug\Learning_Platform.pdb
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Windows Form\Learning_Platform\Learning_Platform\obj\Debug\Learning_Platform.Sign_Up_Student.resources
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Windows Form\Learning_Platform\Learning_Platform\obj\Debug\Learning_Platform.Sign_Up_Lecturer.resources
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Windows Form\Learning_Platform\Learning_Platform\obj\Debug\Learning_Platform.Sign_In_Student_Pwd.resources
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Windows Form\Learning_Platform_Login\Learning_Platform\bin\Debug\Learning_Platform.exe.config
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Windows Form\Learning_Platform_Login\Learning_Platform\bin\Debug\Learning_Platform.exe
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Windows Form\Learning_Platform_Login\Learning_Platform\bin\Debug\Learning_Platform.pdb
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Windows Form\Learning_Platform_Login\Learning_Platform\bin\Debug\MetroFramework.Design.dll
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Windows Form\Learning_Platform_Login\Learning_Platform\bin\Debug\MetroFramework.dll
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Windows Form\Learning_Platform_Login\Learning_Platform\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Windows Form\Learning_Platform_Login\Learning_Platform\obj\Debug\Learning_Platform.csproj.AssemblyReference.cache
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Windows Form\Learning_Platform_Login\Learning_Platform\obj\Debug\Learning_Platform.csproj.SuggestedBindingRedirects.cache
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Windows Form\Learning_Platform_Login\Learning_Platform\obj\Debug\Learning_Platform.Properties.Resources.resources
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Windows Form\Learning_Platform_Login\Learning_Platform\obj\Debug\Learning_Platform.Sign_In_Lecturer.resources
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Windows Form\Learning_Platform_Login\Learning_Platform\obj\Debug\Learning_Platform.Sign_In_Lecturer_Pwd.resources
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Windows Form\Learning_Platform_Login\Learning_Platform\obj\Debug\Learning_Platform.Sign_In_Student.resources
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Windows Form\Learning_Platform_Login\Learning_Platform\obj\Debug\Learning_Platform.Sign_In_Student_Pwd.resources
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Windows Form\Learning_Platform_Login\Learning_Platform\obj\Debug\Learning_Platform.Sign_Up_Lecturer.resources
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Windows Form\Learning_Platform_Login\Learning_Platform\obj\Debug\Learning_Platform.Sign_Up_Student.resources
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Windows Form\Learning_Platform_Login\Learning_Platform\obj\Debug\Learning_Platform.User_Type.resources
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Windows Form\Learning_Platform_Login\Learning_Platform\obj\Debug\Learning_Platform.csproj.GenerateResource.cache
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Windows Form\Learning_Platform_Login\Learning_Platform\obj\Debug\Learning_Platform.csproj.CoreCompileInputs.cache
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Windows Form\Learning_Platform_Login\Learning_Platform\obj\Debug\Learning_Platform.csproj.CopyComplete
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Windows Form\Learning_Platform_Login\Learning_Platform\obj\Debug\Learning_Platform.exe
+C:\Users\SM\Documents\NIBM\Diploma in SE\Semester 2 Stage 1\GUI\Confidential\Windows Form\Learning_Platform_Login\Learning_Platform\obj\Debug\Learning_Platform.pdb
