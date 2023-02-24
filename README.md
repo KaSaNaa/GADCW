@@ -63,14 +63,16 @@ GAD coursework project at uni.
           CompletionDate date
       }
 
-      Users }|..o{ UserCourses : enrolls
-      UserCourses }o..|{ Courses : includes
+      Users }|..o{ Courses : enrolls
+      Users }|..o{ UserCourses : includes
       Users }|..o{ UserLessons : completes
-      UserLessons }o..|{ Lessons : consists_of
       Users }|..o{ UserQuizzes : completes
+      UserLessons }o..|{ Lessons : consists_of
       UserQuizzes }o..|{ Quizzes : comprises_of
+      UserCourses }|..o{ Courses : includes
       Courses }|..|{ Lessons : has
       Courses }|..|{ Quizzes : has
       Quizzes }|..|{ Questions : has
+      
 
 ```
