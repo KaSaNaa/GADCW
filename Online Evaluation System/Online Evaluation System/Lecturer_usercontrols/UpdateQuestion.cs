@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace Online_Evaluation_System.Lecturer_usercontrols
 {
-    public partial class AddNewQuestion : UserControl
-    { 
-        public AddNewQuestion()
+    public partial class UpdateQuestion : UserControl
+    {
+        public UpdateQuestion()
         {
             InitializeComponent();
         }
 
-        private void lbl_questionNo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txt_option4_TextChanged(object sender, EventArgs e)
+        private void label9_Click(object sender, EventArgs e)
         {
 
         }

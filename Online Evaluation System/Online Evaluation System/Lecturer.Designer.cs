@@ -34,7 +34,9 @@
             this.btn_update = new System.Windows.Forms.Button();
             this.btn_add = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.updateQuestion1 = new Online_Evaluation_System.Lecturer_usercontrols.UpdateQuestion();
             this.addNewQuestion1 = new Online_Evaluation_System.Lecturer_usercontrols.AddNewQuestion();
+            this.view_DeleteQuestion1 = new Online_Evaluation_System.Lecturer_usercontrols.View_DeleteQuestion();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -70,6 +72,7 @@
             this.btn_ViewandDelete.TabIndex = 2;
             this.btn_ViewandDelete.Text = "View & Delete Question";
             this.btn_ViewandDelete.UseVisualStyleBackColor = true;
+            this.btn_ViewandDelete.Click += new System.EventHandler(this.btn_ViewandDelete_Click);
             // 
             // btn_update
             // 
@@ -95,11 +98,20 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.view_DeleteQuestion1);
+            this.panel2.Controls.Add(this.updateQuestion1);
             this.panel2.Controls.Add(this.addNewQuestion1);
             this.panel2.Location = new System.Drawing.Point(227, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(571, 450);
             this.panel2.TabIndex = 1;
+            // 
+            // updateQuestion1
+            // 
+            this.updateQuestion1.Location = new System.Drawing.Point(0, 0);
+            this.updateQuestion1.Name = "updateQuestion1";
+            this.updateQuestion1.Size = new System.Drawing.Size(571, 450);
+            this.updateQuestion1.TabIndex = 1;
             // 
             // addNewQuestion1
             // 
@@ -107,6 +119,13 @@
             this.addNewQuestion1.Name = "addNewQuestion1";
             this.addNewQuestion1.Size = new System.Drawing.Size(571, 450);
             this.addNewQuestion1.TabIndex = 0;
+            // 
+            // view_DeleteQuestion1
+            // 
+            this.view_DeleteQuestion1.Location = new System.Drawing.Point(0, 0);
+            this.view_DeleteQuestion1.Name = "view_DeleteQuestion1";
+            this.view_DeleteQuestion1.Size = new System.Drawing.Size(571, 450);
+            this.view_DeleteQuestion1.TabIndex = 2;
             // 
             // Lecturer
             // 
@@ -133,6 +152,8 @@
         private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.Panel panel2;
         private Lecturer_usercontrols.AddNewQuestion addNewQuestion1;
+        private Lecturer_usercontrols.UpdateQuestion updateQuestion1;
+        private Lecturer_usercontrols.View_DeleteQuestion view_DeleteQuestion1;
     }
 }
 

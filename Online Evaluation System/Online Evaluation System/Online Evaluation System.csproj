@@ -62,6 +62,18 @@
     <Compile Include="Lecturer_usercontrols\AddNewQuestion.Designer.cs">
       <DependentUpon>AddNewQuestion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Lecturer_usercontrols\UpdateQuestion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Lecturer_usercontrols\UpdateQuestion.Designer.cs">
+      <DependentUpon>UpdateQuestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lecturer_usercontrols\View_DeleteQuestion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Lecturer_usercontrols\View_DeleteQuestion.Designer.cs">
+      <DependentUpon>View_DeleteQuestion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Lecturer.resx">
@@ -69,6 +81,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Lecturer_usercontrols\AddNewQuestion.resx">
       <DependentUpon>AddNewQuestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lecturer_usercontrols\UpdateQuestion.resx">
+      <DependentUpon>UpdateQuestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lecturer_usercontrols\View_DeleteQuestion.resx">
+      <DependentUpon>View_DeleteQuestion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

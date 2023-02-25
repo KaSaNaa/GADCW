@@ -20,7 +20,8 @@ namespace Online_Evaluation_System
 
         private void btn_update_Click(object sender, EventArgs e)
         {
-
+            updateQuestion1.Visible = true;
+            updateQuestion1.BringToFront();
         }
 
         private void btn_exit_Click(object sender, EventArgs e)
@@ -37,6 +38,14 @@ namespace Online_Evaluation_System
         private void Lecturer_Load(object sender, EventArgs e)
         {
             addNewQuestion1.Visible = false;
+            updateQuestion1.Visible = false;
+            view_DeleteQuestion1.Visible = false;
+        }
+
+        private void btn_ViewandDelete_Click(object sender, EventArgs e)
+        {
+            view_DeleteQuestion1.Visible = true;
+            view_DeleteQuestion1.BringToFront();
         }
     }
 }
