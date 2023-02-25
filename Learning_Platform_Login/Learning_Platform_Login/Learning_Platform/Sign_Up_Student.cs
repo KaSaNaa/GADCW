@@ -32,13 +32,13 @@ namespace Learning_Platform
         private void btn_create_Click(object sender, EventArgs e)
         {
 
-            string fname = txt_fname.Text;
-            string lname = txt_lname.Text;
-            string email = txt_mail.Text;
-            string username = txt_username.Text;
-            string password = txt_pwd.Text;
-            string confirm_password = txt_con_pwd.Text;
-            DateTime dob = dobPicker.Value;
+            var fname = txt_fname.Text;
+            var lname = txt_lname.Text;
+            var email = txt_mail.Text;
+            var username = txt_username.Text;
+            var password = txt_pwd.Text;
+            var confirm_password = txt_con_pwd.Text;
+            var dob = dobPicker.Value;
 
             try
             {

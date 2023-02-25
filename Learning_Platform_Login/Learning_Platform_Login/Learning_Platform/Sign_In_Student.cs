@@ -61,7 +61,7 @@ namespace Learning_Platform
 
             catch(Exception ex)
             {
-                MessageBox.Show("Please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message);
             }
 
         }
