@@ -89,6 +89,7 @@
             this.txt_activity.Name = "txt_activity";
             this.txt_activity.Size = new System.Drawing.Size(100, 22);
             this.txt_activity.TabIndex = 3;
+            this.txt_activity.TextChanged += new System.EventHandler(this.txt_activity_TextChanged);
             // 
             // contextMenuStrip1
             // 
@@ -238,6 +239,7 @@
             this.btn_next.TabIndex = 20;
             this.btn_next.Text = "Next";
             this.btn_next.UseVisualStyleBackColor = true;
+            this.btn_next.Click += new System.EventHandler(this.btn_next_Click);
             // 
             // btn_reset
             // 
@@ -249,6 +251,7 @@
             this.btn_reset.TabIndex = 21;
             this.btn_reset.Text = "Reset";
             this.btn_reset.UseVisualStyleBackColor = true;
+            this.btn_reset.Click += new System.EventHandler(this.btn_reset_Click);
             // 
             // btn_finish
             // 
@@ -260,6 +263,7 @@
             this.btn_finish.TabIndex = 22;
             this.btn_finish.Text = "Finish";
             this.btn_finish.UseVisualStyleBackColor = true;
+            this.btn_finish.Click += new System.EventHandler(this.btn_finish_Click);
             // 
             // AddNewQuestion
             // 
@@ -288,6 +292,7 @@
             this.Controls.Add(this.label1);
             this.Name = "AddNewQuestion";
             this.Size = new System.Drawing.Size(571, 450);
+            this.Load += new System.EventHandler(this.AddNewQuestion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
