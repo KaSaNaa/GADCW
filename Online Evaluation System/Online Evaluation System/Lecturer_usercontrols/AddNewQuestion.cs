@@ -132,6 +132,12 @@ namespace Online_Evaluation_System.Lecturer_usercontrols
                     lbl_error.Visible = true;
                     txt_activity.Focus();
                 }
+                else if (txt_activity.Text == "0")
+                {
+                    lbl_error.Text = "Error: 0 cannot be inserted";
+                    lbl_error.Visible = true;
+                    txt_activity.Focus();
+                }
                 else
                 {
                     lbl_error.Text = "";
