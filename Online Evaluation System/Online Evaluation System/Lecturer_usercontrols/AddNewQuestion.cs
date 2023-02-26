@@ -39,8 +39,12 @@ namespace Online_Evaluation_System.Lecturer_usercontrols
             ds = fn.getData(query);
             if (ds.Tables[0].Rows.Count != 0 && ds.Tables[0].Rows[0][0].ToString()!="")
             {
-                Int64 id = Convert.ToInt64(ds.Tables[0].Rows[0][0].ToString());
-                txt_activity.Text = (id+1).ToString();
+                long id;
+                bool success = long.TryParse(ds.Tables[0].Rows[0][0].ToString(), out id);
+                if (success)
+                {
+                    txt_activity.Text = (id + 1).ToString();
+                }
             }
             else
             {
@@ -119,6 +123,20 @@ namespace Online_Evaluation_System.Lecturer_usercontrols
                     lbl_questionNo.Text="1";
                     questionNo = Convert.ToInt64(lbl_questionNo.Text.ToString());
                    
+                }
+
+         
+                if (!System.Text.RegularExpressions.Regex.IsMatch(txt_activity.Text, "^[0-9]*$"))
+                {
+                   lbl_error.Text = "Error: Only numbers are allowed";
+                    lbl_error.Visible = true;
+                    txt_activity.Focus();
+                }
+                else
+                {
+                    lbl_error.Text = "";
+                    lbl_error.Visible = true;
+                    txt_activity.Focus();
                 }
             }
         }
