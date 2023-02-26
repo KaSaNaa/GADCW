@@ -55,11 +55,11 @@
             this.documentDataGridViewTextBoxColumn});
             this.DocumentTableView.DataSource = this.documentsBindingSource;
             this.DocumentTableView.Dock = System.Windows.Forms.DockStyle.Left;
-            this.DocumentTableView.Location = new System.Drawing.Point(0, 0);
+            this.DocumentTableView.Location = new System.Drawing.Point(20, 60);
             this.DocumentTableView.Name = "DocumentTableView";
             this.DocumentTableView.ReadOnly = true;
             this.DocumentTableView.RowHeadersWidth = 45;
-            this.DocumentTableView.Size = new System.Drawing.Size(298, 450);
+            this.DocumentTableView.Size = new System.Drawing.Size(298, 370);
             this.DocumentTableView.TabIndex = 0;
             this.DocumentTableView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DocumentTableView_CellContentClick);
             // 
@@ -112,8 +112,11 @@
             this.Controls.Add(this.Btn_DeleteFIle);
             this.Controls.Add(this.Btn_Uploadfile);
             this.Controls.Add(this.DocumentTableView);
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "ViewFilesForm";
+            this.Style = MetroFramework.MetroColorStyle.Black;
             this.Text = "Form2";
+            this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DocumentTableView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentsBindingSource)).EndInit();

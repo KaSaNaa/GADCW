@@ -2,10 +2,11 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using MetroFramework.Drawing;
 
 namespace WindowsFormsApp1
 {
-    public partial class ViewFilesForm : Form
+    public partial class ViewFilesForm : MetroFramework.Forms.MetroForm
     {
         private readonly Timer _timer = new Timer(); //instantiated a timer 
         public ViewFilesForm()
