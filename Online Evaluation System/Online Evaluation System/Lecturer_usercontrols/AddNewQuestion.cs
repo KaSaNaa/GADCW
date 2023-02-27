@@ -103,7 +103,16 @@ namespace Online_Evaluation_System.Lecturer_usercontrols
         {
             if(MessageBox.Show("Set Will be Changed", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                txt_activity.Text = (Convert.ToInt64(txt_activity.Text.ToString()) + 1).ToString();
+                long activity;
+                if (long.TryParse(txt_activity.Text, out activity))
+                {
+                    txt_activity.Text = (activity + 1).ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid activity value", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txt_activity.Clear();
+                }
                 lbl_questionNo.Text = "1";
             }
         }
@@ -127,10 +136,9 @@ namespace Online_Evaluation_System.Lecturer_usercontrols
                    
                 }
 
-         
                 if (!System.Text.RegularExpressions.Regex.IsMatch(txt_activity.Text, "^[0-9]*$"))
                 {
-                   lbl_error.Text = "Error: Only numbers are allowed";
+                    lbl_error.Text = "Error: Only numbers are allowed";
                     lbl_error.Visible = true;
                     txt_activity.Focus();
                 }

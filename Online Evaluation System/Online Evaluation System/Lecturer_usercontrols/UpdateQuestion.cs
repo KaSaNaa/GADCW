@@ -66,7 +66,12 @@ namespace Online_Evaluation_System.Lecturer_usercontrols
             query = "select question,option1,option2,option3,option4,ans from Questions where activity ='" + cmb_activity.Text + "' and qno = '" + cmb_questionNo.Text + "'";
              DataSet ds = fn.getData(query);
 
-            EnableTextBoxes();
+            txt_question.Enabled = true;
+            txt_option1.Enabled = true;
+            txt_option2.Enabled = true;
+            txt_option3.Enabled = true;
+            txt_option4.Enabled = true;
+            txt_ans.Enabled = true;
 
             txt_question.Text = ds.Tables[0].Rows[0][0].ToString();
             txt_option1.Text = ds.Tables[0].Rows[0][1].ToString();
@@ -74,16 +79,6 @@ namespace Online_Evaluation_System.Lecturer_usercontrols
             txt_option3.Text = ds.Tables[0].Rows[0][3].ToString();
             txt_option4.Text = ds.Tables[0].Rows[0][4].ToString();
             txt_ans.Text = ds.Tables[0].Rows[0][5].ToString();
-        }
-
-        private void EnableTextBoxes()
-        {
-            txt_question.Enabled = true;
-            txt_option1.Enabled = true;
-            txt_option2.Enabled = true;
-            txt_option3.Enabled = true;
-            txt_option4.Enabled = true;
-            txt_ans.Enabled = true;
         }
 
         private void btn_reset_Click(object sender, EventArgs e)
@@ -102,6 +97,13 @@ namespace Online_Evaluation_System.Lecturer_usercontrols
             txt_ans.Clear();
             cmb_activity.SelectedIndex = -1;
             cmb_questionNo.SelectedIndex = -1;
+
+            txt_question.Enabled = false;
+            txt_option1.Enabled = false;
+            txt_option2.Enabled = false;
+            txt_option3.Enabled = false;
+            txt_option4.Enabled = false;
+            txt_ans.Enabled = false;
 
         }
 
