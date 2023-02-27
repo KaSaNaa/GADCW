@@ -31,12 +31,12 @@ namespace Online_Evaluation_System.Lecturer_usercontrols
                 cmb_activity.Items.Add(ds.Tables[0].Rows[i][0].ToString());
             }
             cmb_activity.DropDownStyle = ComboBoxStyle.DropDownList;
+
+            dataGridView1.ReadOnly = true;
         }
 
         private void cmb_activity_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
-
                 if (cmb_activity.SelectedIndex != 0)
                 {
                     query = "select qno,question,option1,option2,option3,option4,ans from Questions where activity = '" + cmb_activity.Text + "'";
@@ -49,13 +49,9 @@ namespace Online_Evaluation_System.Lecturer_usercontrols
                     DataSet ds = fn.getData(query);
                     dataGridView1.DataSource = ds.Tables[0];
                 }
-           
         }
 
         int id, questionNO;
-
-        
-
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -63,18 +59,26 @@ namespace Online_Evaluation_System.Lecturer_usercontrols
                 id = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
                 questionNO = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString());
             }
-            catch
+            catch 
             { 
 
             }
         }
         private void btn_delete_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Are you sure?","Delete Confirmation",MessageBoxButtons.YesNo,MessageBoxIcon.Warning)== DialogResult.Yes)
+            if (cmb_activity.SelectedIndex != -1)
             {
-                query = "delete from Questions where id = "+id+" and qno = '"+questionNO+"'";
-                fn.setData(query, "Question deleted");
-                View_DeleteQuestion_Load(this, null);
+                if (MessageBox.Show("Are you sure?", "Delete Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    query = "delete from Questions where id = " + id + " and qno = '" + questionNO + "'";
+                    fn.setData(query, "Question deleted");
+                    View_DeleteQuestion_Load(this, null);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Select Activity First", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
             }
         }
     }
