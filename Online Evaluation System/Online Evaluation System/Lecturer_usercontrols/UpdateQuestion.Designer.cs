@@ -97,6 +97,7 @@
             this.cmb_questionNo.Name = "cmb_questionNo";
             this.cmb_questionNo.Size = new System.Drawing.Size(121, 29);
             this.cmb_questionNo.TabIndex = 4;
+            this.cmb_questionNo.SelectedIndexChanged += new System.EventHandler(this.cmb_questionNo_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -169,6 +170,7 @@
             this.btn_update.TabIndex = 12;
             this.btn_update.Text = "Update";
             this.btn_update.UseVisualStyleBackColor = true;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
             // btn_reset
             // 
@@ -180,6 +182,7 @@
             this.btn_reset.TabIndex = 13;
             this.btn_reset.Text = "Reset";
             this.btn_reset.UseVisualStyleBackColor = true;
+            this.btn_reset.Click += new System.EventHandler(this.btn_reset_Click);
             // 
             // txt_option1
             // 

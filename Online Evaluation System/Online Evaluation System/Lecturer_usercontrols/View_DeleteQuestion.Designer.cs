@@ -64,16 +64,18 @@
             this.cmb_activity.Name = "cmb_activity";
             this.cmb_activity.Size = new System.Drawing.Size(121, 29);
             this.cmb_activity.TabIndex = 2;
+            this.cmb_activity.SelectedIndexChanged += new System.EventHandler(this.cmb_activity_SelectedIndexChanged);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(36, 128);
+            this.dataGridView1.Location = new System.Drawing.Point(38, 127);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(504, 252);
             this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // btn_delete
             // 
@@ -85,6 +87,7 @@
             this.btn_delete.TabIndex = 4;
             this.btn_delete.Text = "Delete";
             this.btn_delete.UseVisualStyleBackColor = true;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // View_DeleteQuestion
             // 
@@ -97,6 +100,7 @@
             this.Controls.Add(this.label1);
             this.Name = "View_DeleteQuestion";
             this.Size = new System.Drawing.Size(571, 450);
+            this.Load += new System.EventHandler(this.View_DeleteQuestion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
