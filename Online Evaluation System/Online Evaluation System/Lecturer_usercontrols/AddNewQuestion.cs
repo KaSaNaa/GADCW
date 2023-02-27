@@ -58,23 +58,25 @@ namespace Online_Evaluation_System.Lecturer_usercontrols
 
         private void btn_next_Click(object sender, EventArgs e)
         {
-            String activity = txt_activity.Text;
-            String qno = questionNo.ToString();
-            String question = txt_question.Text;
-            String option1 = txt_option1.Text;
-            String option2 = txt_option2.Text;
-            String option3 = txt_option3.Text;
-            String option4 = txt_option4.Text;
-            String ans = txt_answer.Text;
+            
+            
+                String activity = txt_activity.Text;
+                String qno = questionNo.ToString();
+                String question = txt_question.Text;
+                String option1 = txt_option1.Text;
+                String option2 = txt_option2.Text;
+                String option3 = txt_option3.Text;
+                String option4 = txt_option4.Text;
+                String ans = txt_answer.Text;
 
-            query = "insert into Questions(activity, qno, question, option1, option2, option3, option4, ans) values('" + activity + "','" + qno + "','" + question + "','" + option1 + "','" + option2 + "','" + option3 + "','" + option4 + "','" + ans + "')";
-            fn.setData(query, "Question added");
+               
 
-            clearAll();
-            questionNo++;
-            lbl_questionNo.Text = questionNo.ToString();
+                query = "insert into Questions(activity, qno, question, option1, option2, option3, option4, ans) values('" + activity + "','" + qno + "','" + question + "','" + option1 + "','" + option2 + "','" + option3 + "','" + option4 + "','" + ans + "')";
+                fn.setData(query, "Question added");
 
-
+                clearAll();
+                questionNo++;
+                lbl_questionNo.Text = questionNo.ToString();
             
         }
 
@@ -144,6 +146,7 @@ namespace Online_Evaluation_System.Lecturer_usercontrols
                     lbl_error.Visible = true;
                     txt_activity.Focus();
                 }
+
             }
         }
     }

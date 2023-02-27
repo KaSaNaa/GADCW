@@ -87,6 +87,7 @@
             this.cmb_activity.Name = "cmb_activity";
             this.cmb_activity.Size = new System.Drawing.Size(121, 29);
             this.cmb_activity.TabIndex = 3;
+            this.cmb_activity.SelectedIndexChanged += new System.EventHandler(this.cmb_activity_SelectedIndexChanged);
             // 
             // cmb_questionNo
             // 
@@ -253,6 +254,7 @@
             this.Controls.Add(this.label1);
             this.Name = "UpdateQuestion";
             this.Size = new System.Drawing.Size(571, 450);
+            this.Load += new System.EventHandler(this.UpdateQuestion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
