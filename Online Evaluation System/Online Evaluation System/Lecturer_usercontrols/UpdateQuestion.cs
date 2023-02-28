@@ -128,5 +128,10 @@ namespace Online_Evaluation_System.Lecturer_usercontrols
                 MessageBox.Show("Select Question number First", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void btn_refresh_Click(object sender, EventArgs e)
+        {
+           UpdateQuestion_Load(this, null);
+        }
     }
 }

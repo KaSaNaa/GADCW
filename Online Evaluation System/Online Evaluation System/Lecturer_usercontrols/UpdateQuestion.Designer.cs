@@ -47,6 +47,7 @@
             this.txt_option4 = new System.Windows.Forms.TextBox();
             this.txt_ans = new System.Windows.Forms.TextBox();
             this.txt_question = new System.Windows.Forms.TextBox();
+            this.btn_refresh = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -164,7 +165,7 @@
             // 
             this.btn_update.Font = new System.Drawing.Font("Franklin Gothic Demi Cond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_update.ForeColor = System.Drawing.Color.Brown;
-            this.btn_update.Location = new System.Drawing.Point(139, 374);
+            this.btn_update.Location = new System.Drawing.Point(105, 374);
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(75, 40);
             this.btn_update.TabIndex = 12;
@@ -176,7 +177,7 @@
             // 
             this.btn_reset.Font = new System.Drawing.Font("Franklin Gothic Demi Cond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_reset.ForeColor = System.Drawing.Color.Brown;
-            this.btn_reset.Location = new System.Drawing.Point(330, 374);
+            this.btn_reset.Location = new System.Drawing.Point(232, 374);
             this.btn_reset.Name = "btn_reset";
             this.btn_reset.Size = new System.Drawing.Size(75, 40);
             this.btn_reset.TabIndex = 13;
@@ -232,10 +233,23 @@
             this.txt_question.Size = new System.Drawing.Size(322, 27);
             this.txt_question.TabIndex = 19;
             // 
+            // btn_refresh
+            // 
+            this.btn_refresh.Font = new System.Drawing.Font("Franklin Gothic Demi Cond", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_refresh.ForeColor = System.Drawing.Color.Brown;
+            this.btn_refresh.Location = new System.Drawing.Point(343, 374);
+            this.btn_refresh.Name = "btn_refresh";
+            this.btn_refresh.Size = new System.Drawing.Size(84, 40);
+            this.btn_refresh.TabIndex = 20;
+            this.btn_refresh.Text = "Refresh";
+            this.btn_refresh.UseVisualStyleBackColor = true;
+            this.btn_refresh.Click += new System.EventHandler(this.btn_refresh_Click);
+            // 
             // UpdateQuestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btn_refresh);
             this.Controls.Add(this.txt_question);
             this.Controls.Add(this.txt_ans);
             this.Controls.Add(this.txt_option4);
@@ -284,5 +298,6 @@
         private System.Windows.Forms.TextBox txt_option4;
         private System.Windows.Forms.TextBox txt_ans;
         private System.Windows.Forms.TextBox txt_question;
+        private System.Windows.Forms.Button btn_refresh;
     }
 }

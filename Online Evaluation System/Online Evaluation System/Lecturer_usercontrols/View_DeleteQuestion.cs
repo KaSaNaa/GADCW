@@ -64,6 +64,12 @@ namespace Online_Evaluation_System.Lecturer_usercontrols
 
             }
         }
+
+        private void btn_refresh_Click(object sender, EventArgs e)
+        {
+            View_DeleteQuestion_Load(this, null);
+        }
+
         private void btn_delete_Click(object sender, EventArgs e)
         {
             if (cmb_activity.SelectedIndex != -1)
