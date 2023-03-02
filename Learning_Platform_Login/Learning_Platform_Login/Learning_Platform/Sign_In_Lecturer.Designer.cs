@@ -28,126 +28,170 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_account = new MetroFramework.Controls.MetroTile();
-            this.label1 = new System.Windows.Forms.Label();
-            this.link_forgot_pwd = new System.Windows.Forms.LinkLabel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btn_login = new MetroFramework.Controls.MetroTile();
-            this.txt_pwd = new System.Windows.Forms.TextBox();
-            this.txt_name = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sign_In_Lecturer));
+            this.Link_BackButton = new MetroFramework.Controls.MetroLink();
+            this.Btn_CreateAcc = new MetroFramework.Controls.MetroButton();
+            this.Btn_Login = new MetroFramework.Controls.MetroButton();
+            this.Link_ForgotPswd = new MetroFramework.Controls.MetroLink();
+            this.TxtB_Password = new MetroFramework.Controls.MetroTextBox();
+            this.TxtB_Username = new MetroFramework.Controls.MetroTextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_back_user = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // btn_account
+            // Link_BackButton
             // 
-            this.btn_account.ActiveControl = null;
-            this.btn_account.Location = new System.Drawing.Point(274, 362);
-            this.btn_account.Name = "btn_account";
-            this.btn_account.Size = new System.Drawing.Size(257, 49);
-            this.btn_account.TabIndex = 17;
-            this.btn_account.Text = "Create an account";
-            this.btn_account.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_account.UseSelectable = true;
-            this.btn_account.Click += new System.EventHandler(this.btn_account_Click);
+            this.Link_BackButton.Image = ((System.Drawing.Image)(resources.GetObject("Link_BackButton.Image")));
+            this.Link_BackButton.ImageSize = 50;
+            this.Link_BackButton.Location = new System.Drawing.Point(17, 179);
+            this.Link_BackButton.Name = "Link_BackButton";
+            this.Link_BackButton.NoFocusImage = ((System.Drawing.Image)(resources.GetObject("Link_BackButton.NoFocusImage")));
+            this.Link_BackButton.Size = new System.Drawing.Size(44, 49);
+            this.Link_BackButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Link_BackButton.TabIndex = 21;
+            this.Link_BackButton.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.Link_BackButton.UseCustomBackColor = true;
+            this.Link_BackButton.UseSelectable = true;
+            this.Link_BackButton.Click += new System.EventHandler(this.Link_BackButton_Click);
             // 
-            // label1
+            // Btn_CreateAcc
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(270, 135);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 20);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Username";
+            this.Btn_CreateAcc.Location = new System.Drawing.Point(213, 288);
+            this.Btn_CreateAcc.Name = "Btn_CreateAcc";
+            this.Btn_CreateAcc.Size = new System.Drawing.Size(193, 40);
+            this.Btn_CreateAcc.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Btn_CreateAcc.TabIndex = 19;
+            this.Btn_CreateAcc.Text = "Create Account";
+            this.Btn_CreateAcc.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.Btn_CreateAcc.UseSelectable = true;
+            this.Btn_CreateAcc.Click += new System.EventHandler(this.Btn_CreateAcc_Click);
             // 
-            // link_forgot_pwd
+            // Btn_Login
             // 
-            this.link_forgot_pwd.AutoSize = true;
-            this.link_forgot_pwd.Location = new System.Drawing.Point(392, 276);
-            this.link_forgot_pwd.Name = "link_forgot_pwd";
-            this.link_forgot_pwd.Size = new System.Drawing.Size(139, 16);
-            this.link_forgot_pwd.TabIndex = 15;
-            this.link_forgot_pwd.TabStop = true;
-            this.link_forgot_pwd.Text = "Forgot the password ?";
-            this.link_forgot_pwd.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.link_forgot_pwd_LinkClicked);
+            this.Btn_Login.Location = new System.Drawing.Point(213, 233);
+            this.Btn_Login.Name = "Btn_Login";
+            this.Btn_Login.Size = new System.Drawing.Size(193, 40);
+            this.Btn_Login.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Btn_Login.TabIndex = 20;
+            this.Btn_Login.Text = "Log In";
+            this.Btn_Login.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.Btn_Login.UseSelectable = true;
+            this.Btn_Login.Click += new System.EventHandler(this.Btn_Login_Click_1);
             // 
-            // label3
+            // Link_ForgotPswd
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(276, 39);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(246, 38);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Lecturer Portal";
+            this.Link_ForgotPswd.Location = new System.Drawing.Point(289, 197);
+            this.Link_ForgotPswd.Name = "Link_ForgotPswd";
+            this.Link_ForgotPswd.Size = new System.Drawing.Size(117, 23);
+            this.Link_ForgotPswd.TabIndex = 18;
+            this.Link_ForgotPswd.Text = "Forgot Password?";
+            this.Link_ForgotPswd.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.Link_ForgotPswd.UseSelectable = true;
+            this.Link_ForgotPswd.Click += new System.EventHandler(this.Link_ForgotPswd_Click);
             // 
-            // btn_login
+            // TxtB_Password
             // 
-            this.btn_login.ActiveControl = null;
-            this.btn_login.Location = new System.Drawing.Point(274, 307);
-            this.btn_login.Name = "btn_login";
-            this.btn_login.Size = new System.Drawing.Size(257, 49);
-            this.btn_login.TabIndex = 13;
-            this.btn_login.Text = "Login";
-            this.btn_login.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_login.UseSelectable = true;
-            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
             // 
-            // txt_pwd
             // 
-            this.txt_pwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_pwd.Location = new System.Drawing.Point(274, 232);
-            this.txt_pwd.Name = "txt_pwd";
-            this.txt_pwd.Size = new System.Drawing.Size(257, 30);
-            this.txt_pwd.TabIndex = 12;
             // 
-            // txt_name
+            this.TxtB_Password.CustomButton.Image = null;
+            this.TxtB_Password.CustomButton.Location = new System.Drawing.Point(158, 2);
+            this.TxtB_Password.CustomButton.Name = "";
+            this.TxtB_Password.CustomButton.Size = new System.Drawing.Size(27, 27);
+            this.TxtB_Password.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.TxtB_Password.CustomButton.TabIndex = 1;
+            this.TxtB_Password.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.TxtB_Password.CustomButton.UseSelectable = true;
+            this.TxtB_Password.CustomButton.Visible = false;
+            this.TxtB_Password.Lines = new string[0];
+            this.TxtB_Password.Location = new System.Drawing.Point(215, 159);
+            this.TxtB_Password.MaxLength = 32767;
+            this.TxtB_Password.Name = "TxtB_Password";
+            this.TxtB_Password.PasswordChar = '\0';
+            this.TxtB_Password.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.TxtB_Password.SelectedText = "";
+            this.TxtB_Password.SelectionLength = 0;
+            this.TxtB_Password.SelectionStart = 0;
+            this.TxtB_Password.ShortcutsEnabled = true;
+            this.TxtB_Password.Size = new System.Drawing.Size(188, 32);
+            this.TxtB_Password.TabIndex = 16;
+            this.TxtB_Password.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.TxtB_Password.UseSelectable = true;
+            this.TxtB_Password.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.TxtB_Password.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            this.txt_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_name.Location = new System.Drawing.Point(274, 158);
-            this.txt_name.Name = "txt_name";
-            this.txt_name.Size = new System.Drawing.Size(257, 30);
-            this.txt_name.TabIndex = 11;
+            // TxtB_Username
+            // 
+            // 
+            // 
+            // 
+            this.TxtB_Username.CustomButton.Image = null;
+            this.TxtB_Username.CustomButton.Location = new System.Drawing.Point(158, 2);
+            this.TxtB_Username.CustomButton.Name = "";
+            this.TxtB_Username.CustomButton.Size = new System.Drawing.Size(27, 27);
+            this.TxtB_Username.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.TxtB_Username.CustomButton.TabIndex = 1;
+            this.TxtB_Username.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.TxtB_Username.CustomButton.UseSelectable = true;
+            this.TxtB_Username.CustomButton.Visible = false;
+            this.TxtB_Username.Lines = new string[0];
+            this.TxtB_Username.Location = new System.Drawing.Point(215, 99);
+            this.TxtB_Username.MaxLength = 32767;
+            this.TxtB_Username.Name = "TxtB_Username";
+            this.TxtB_Username.PasswordChar = '\0';
+            this.TxtB_Username.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.TxtB_Username.SelectedText = "";
+            this.TxtB_Username.SelectionLength = 0;
+            this.TxtB_Username.SelectionStart = 0;
+            this.TxtB_Username.ShortcutsEnabled = true;
+            this.TxtB_Username.Size = new System.Drawing.Size(188, 32);
+            this.TxtB_Username.TabIndex = 17;
+            this.TxtB_Username.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.TxtB_Username.UseSelectable = true;
+            this.TxtB_Username.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.TxtB_Username.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(270, 209);
+            this.label2.Font = new System.Drawing.Font("Hubot-Sans Semi", 8.830189F);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(210, 139);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 20);
-            this.label2.TabIndex = 10;
+            this.label2.Size = new System.Drawing.Size(69, 17);
+            this.label2.TabIndex = 15;
             this.label2.Text = "Password";
             // 
-            // btn_back_user
+            // label1
             // 
-            this.btn_back_user.BackColor = System.Drawing.Color.Transparent;
-            this.btn_back_user.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_back_user.Location = new System.Drawing.Point(12, 12);
-            this.btn_back_user.Name = "btn_back_user";
-            this.btn_back_user.Size = new System.Drawing.Size(75, 31);
-            this.btn_back_user.TabIndex = 18;
-            this.btn_back_user.Text = "<----";
-            this.btn_back_user.UseVisualStyleBackColor = false;
-            this.btn_back_user.Click += new System.EventHandler(this.btn_back_user_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Hubot-Sans Semi", 8.830189F);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(210, 79);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(72, 17);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Username";
             // 
             // Sign_In_Lecturer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btn_back_user);
-            this.Controls.Add(this.btn_account);
+            this.ClientSize = new System.Drawing.Size(616, 407);
+            this.Controls.Add(this.Link_BackButton);
+            this.Controls.Add(this.Btn_CreateAcc);
+            this.Controls.Add(this.Btn_Login);
+            this.Controls.Add(this.Link_ForgotPswd);
+            this.Controls.Add(this.TxtB_Password);
+            this.Controls.Add(this.TxtB_Username);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.link_forgot_pwd);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.btn_login);
-            this.Controls.Add(this.txt_pwd);
-            this.Controls.Add(this.txt_name);
             this.Controls.Add(this.label2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Sign_In_Lecturer";
-            this.Text = "Sign_In_Lecturer";
+            this.Text = "Lecturer Sign-in";
+            this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Load += new System.EventHandler(this.Sign_In_Lecturer_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -156,14 +200,13 @@
 
         #endregion
 
-        private MetroFramework.Controls.MetroTile btn_account;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.LinkLabel link_forgot_pwd;
-        private System.Windows.Forms.Label label3;
-        private MetroFramework.Controls.MetroTile btn_login;
-        private System.Windows.Forms.TextBox txt_pwd;
-        private System.Windows.Forms.TextBox txt_name;
+        private MetroFramework.Controls.MetroLink Link_BackButton;
+        private MetroFramework.Controls.MetroButton Btn_CreateAcc;
+        private MetroFramework.Controls.MetroButton Btn_Login;
+        private MetroFramework.Controls.MetroLink Link_ForgotPswd;
+        private MetroFramework.Controls.MetroTextBox TxtB_Password;
+        private MetroFramework.Controls.MetroTextBox TxtB_Username;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btn_back_user;
+        private System.Windows.Forms.Label label1;
     }
 }

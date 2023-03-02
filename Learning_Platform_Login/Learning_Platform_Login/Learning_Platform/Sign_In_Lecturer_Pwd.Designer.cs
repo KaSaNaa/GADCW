@@ -28,117 +28,185 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label7 = new System.Windows.Forms.Label();
-            this.btn_confirm = new MetroFramework.Controls.MetroTile();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txt_username = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txt_con_pwd = new System.Windows.Forms.TextBox();
-            this.txt_pwd = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.components = new System.ComponentModel.Container();
+            this.TxtB_ConfirmPswd = new MetroFramework.Controls.MetroTextBox();
+            this.TxtB_Password = new MetroFramework.Controls.MetroTextBox();
+            this.TxtB_Username = new MetroFramework.Controls.MetroTextBox();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.metroStyleManager1 = new MetroFramework.Components.MetroStyleManager(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label7
+            // TxtB_ConfirmPswd
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(246, 16);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(309, 32);
-            this.label7.TabIndex = 38;
-            this.label7.Text = "Password Verification";
             // 
-            // btn_confirm
             // 
-            this.btn_confirm.ActiveControl = null;
-            this.btn_confirm.BackColor = System.Drawing.Color.Black;
-            this.btn_confirm.Location = new System.Drawing.Point(266, 381);
-            this.btn_confirm.Name = "btn_confirm";
-            this.btn_confirm.Size = new System.Drawing.Size(263, 54);
-            this.btn_confirm.TabIndex = 37;
-            this.btn_confirm.Text = "Confirm";
-            this.btn_confirm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_confirm.UseSelectable = true;
-            this.btn_confirm.Click += new System.EventHandler(this.btn_confirm_Click);
             // 
-            // label1
+            this.TxtB_ConfirmPswd.CustomButton.Image = null;
+            this.TxtB_ConfirmPswd.CustomButton.Location = new System.Drawing.Point(173, 1);
+            this.TxtB_ConfirmPswd.CustomButton.Name = "";
+            this.TxtB_ConfirmPswd.CustomButton.Size = new System.Drawing.Size(29, 29);
+            this.TxtB_ConfirmPswd.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.TxtB_ConfirmPswd.CustomButton.TabIndex = 1;
+            this.TxtB_ConfirmPswd.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.TxtB_ConfirmPswd.CustomButton.UseSelectable = true;
+            this.TxtB_ConfirmPswd.CustomButton.Visible = false;
+            this.TxtB_ConfirmPswd.Lines = new string[0];
+            this.TxtB_ConfirmPswd.Location = new System.Drawing.Point(199, 254);
+            this.TxtB_ConfirmPswd.MaxLength = 32767;
+            this.TxtB_ConfirmPswd.Name = "TxtB_ConfirmPswd";
+            this.TxtB_ConfirmPswd.PasswordChar = '\0';
+            this.TxtB_ConfirmPswd.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.TxtB_ConfirmPswd.SelectedText = "";
+            this.TxtB_ConfirmPswd.SelectionLength = 0;
+            this.TxtB_ConfirmPswd.SelectionStart = 0;
+            this.TxtB_ConfirmPswd.ShortcutsEnabled = true;
+            this.TxtB_ConfirmPswd.Size = new System.Drawing.Size(203, 31);
+            this.TxtB_ConfirmPswd.TabIndex = 43;
+            this.TxtB_ConfirmPswd.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.TxtB_ConfirmPswd.UseSelectable = true;
+            this.TxtB_ConfirmPswd.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.TxtB_ConfirmPswd.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Black;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(328, 283);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 18);
-            this.label1.TabIndex = 36;
-            this.label1.Text = "Confirm Password";
+            // TxtB_Password
             // 
-            // txt_username
             // 
-            this.txt_username.BackColor = System.Drawing.Color.White;
-            this.txt_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_username.Location = new System.Drawing.Point(252, 122);
-            this.txt_username.Name = "txt_username";
-            this.txt_username.Size = new System.Drawing.Size(290, 34);
-            this.txt_username.TabIndex = 35;
             // 
-            // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Black;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(356, 90);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 18);
-            this.label5.TabIndex = 34;
-            this.label5.Text = "Username";
+            this.TxtB_Password.CustomButton.Image = null;
+            this.TxtB_Password.CustomButton.Location = new System.Drawing.Point(173, 1);
+            this.TxtB_Password.CustomButton.Name = "";
+            this.TxtB_Password.CustomButton.Size = new System.Drawing.Size(29, 29);
+            this.TxtB_Password.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.TxtB_Password.CustomButton.TabIndex = 1;
+            this.TxtB_Password.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.TxtB_Password.CustomButton.UseSelectable = true;
+            this.TxtB_Password.CustomButton.Visible = false;
+            this.TxtB_Password.Lines = new string[0];
+            this.TxtB_Password.Location = new System.Drawing.Point(199, 175);
+            this.TxtB_Password.MaxLength = 32767;
+            this.TxtB_Password.Name = "TxtB_Password";
+            this.TxtB_Password.PasswordChar = '\0';
+            this.TxtB_Password.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.TxtB_Password.SelectedText = "";
+            this.TxtB_Password.SelectionLength = 0;
+            this.TxtB_Password.SelectionStart = 0;
+            this.TxtB_Password.ShortcutsEnabled = true;
+            this.TxtB_Password.Size = new System.Drawing.Size(203, 31);
+            this.TxtB_Password.TabIndex = 44;
+            this.TxtB_Password.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.TxtB_Password.UseSelectable = true;
+            this.TxtB_Password.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.TxtB_Password.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // txt_con_pwd
+            // TxtB_Username
             // 
-            this.txt_con_pwd.BackColor = System.Drawing.Color.White;
-            this.txt_con_pwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_con_pwd.Location = new System.Drawing.Point(252, 313);
-            this.txt_con_pwd.Name = "txt_con_pwd";
-            this.txt_con_pwd.Size = new System.Drawing.Size(290, 34);
-            this.txt_con_pwd.TabIndex = 33;
             // 
-            // txt_pwd
             // 
-            this.txt_pwd.BackColor = System.Drawing.Color.White;
-            this.txt_pwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_pwd.Location = new System.Drawing.Point(252, 219);
-            this.txt_pwd.Name = "txt_pwd";
-            this.txt_pwd.Size = new System.Drawing.Size(290, 34);
-            this.txt_pwd.TabIndex = 32;
             // 
-            // label3
+            this.TxtB_Username.CustomButton.Image = null;
+            this.TxtB_Username.CustomButton.Location = new System.Drawing.Point(173, 1);
+            this.TxtB_Username.CustomButton.Name = "";
+            this.TxtB_Username.CustomButton.Size = new System.Drawing.Size(29, 29);
+            this.TxtB_Username.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.TxtB_Username.CustomButton.TabIndex = 1;
+            this.TxtB_Username.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.TxtB_Username.CustomButton.UseSelectable = true;
+            this.TxtB_Username.CustomButton.Visible = false;
+            this.TxtB_Username.Lines = new string[0];
+            this.TxtB_Username.Location = new System.Drawing.Point(199, 95);
+            this.TxtB_Username.MaxLength = 32767;
+            this.TxtB_Username.Name = "TxtB_Username";
+            this.TxtB_Username.PasswordChar = '\0';
+            this.TxtB_Username.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.TxtB_Username.SelectedText = "";
+            this.TxtB_Username.SelectionLength = 0;
+            this.TxtB_Username.SelectionStart = 0;
+            this.TxtB_Username.ShortcutsEnabled = true;
+            this.TxtB_Username.Size = new System.Drawing.Size(203, 31);
+            this.TxtB_Username.TabIndex = 45;
+            this.TxtB_Username.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.TxtB_Username.UseSelectable = true;
+            this.TxtB_Username.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.TxtB_Username.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Black;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(341, 189);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 18);
-            this.label3.TabIndex = 31;
-            this.label3.Text = "New Password";
+            // metroButton1
+            // 
+            this.metroButton1.Location = new System.Drawing.Point(199, 302);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(200, 44);
+            this.metroButton1.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroButton1.TabIndex = 42;
+            this.metroButton1.Text = "Confirm";
+            this.metroButton1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Black;
+            this.label2.Font = new System.Drawing.Font("Hubot-Sans Semi", 8.830189F);
+            this.label2.ForeColor = System.Drawing.Color.Transparent;
+            this.label2.Location = new System.Drawing.Point(196, 234);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(121, 17);
+            this.label2.TabIndex = 41;
+            this.label2.Text = "Confirm Password";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Black;
+            this.label4.Font = new System.Drawing.Font("Hubot-Sans Semi", 8.830189F);
+            this.label4.ForeColor = System.Drawing.Color.Transparent;
+            this.label4.Location = new System.Drawing.Point(196, 75);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(72, 17);
+            this.label4.TabIndex = 40;
+            this.label4.Text = "Username";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Black;
+            this.label6.Font = new System.Drawing.Font("Hubot-Sans Semi", 8.830189F);
+            this.label6.ForeColor = System.Drawing.Color.Transparent;
+            this.label6.Location = new System.Drawing.Point(196, 155);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(99, 17);
+            this.label6.TabIndex = 39;
+            this.label6.Text = "New Password";
+            // 
+            // metroStyleManager1
+            // 
+            this.metroStyleManager1.Owner = this;
+            this.metroStyleManager1.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // Sign_In_Lecturer_Pwd
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.btn_confirm);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txt_username);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.txt_con_pwd);
-            this.Controls.Add(this.txt_pwd);
-            this.Controls.Add(this.label3);
+            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.TxtB_ConfirmPswd);
+            this.Controls.Add(this.TxtB_Password);
+            this.Controls.Add(this.TxtB_Username);
+            this.Controls.Add(this.metroButton1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label6);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Sign_In_Lecturer_Pwd";
-            this.Text = "Sign_In_Lecturer_Pwd";
+            this.Padding = new System.Windows.Forms.Padding(15, 49, 15, 16);
+            this.Text = "Lecturer Password Verification";
+            this.Theme = MetroFramework.MetroThemeStyle.Dark;
+            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,13 +214,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label7;
-        private MetroFramework.Controls.MetroTile btn_confirm;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txt_username;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txt_con_pwd;
-        private System.Windows.Forms.TextBox txt_pwd;
-        private System.Windows.Forms.Label label3;
+        private MetroFramework.Controls.MetroTextBox TxtB_ConfirmPswd;
+        private MetroFramework.Controls.MetroTextBox TxtB_Password;
+        private MetroFramework.Controls.MetroTextBox TxtB_Username;
+        private MetroFramework.Controls.MetroButton metroButton1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
+        private MetroFramework.Components.MetroStyleManager metroStyleManager1;
     }
 }

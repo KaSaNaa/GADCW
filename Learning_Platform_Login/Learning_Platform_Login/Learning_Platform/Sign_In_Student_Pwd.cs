@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 
 namespace Learning_Platform
 {
-    public partial class Sign_In_Student_Pwd : Form
+    public partial class Sign_In_Student_Pwd : MetroFramework.Forms.MetroForm
     {
         public Sign_In_Student_Pwd()
         {
@@ -22,9 +22,9 @@ namespace Learning_Platform
         SqlCommand cmd;
         private void btn_confirm_Click(object sender, EventArgs e)
         {
-            string username = txt_username.Text;
-            string password = txt_pwd.Text;
-            string confirm_password = txt_con_pwd.Text;
+            string username = TxtB_Username.Text;
+            string password = TxtB_Password.Text;
+            string confirm_password = TxtB_ConfirmPswd.Text;
 
             try
             {
@@ -54,7 +54,7 @@ namespace Learning_Platform
 
             con = new SqlConnection("Data Source=DESKTOP-CTNVSJ1;Initial Catalog=Sign_Up_Details;Integrated Security=True");
             con.Open();
-            cmd = new SqlCommand("UPDATE Student SET Student_Password = '"+txt_pwd.Text+"', Student_Confirm = '"+txt_con_pwd.Text+"' WHERE Student_Username = '"+txt_username.Text+"'", con);
+            cmd = new SqlCommand("UPDATE Student SET Student_Password = '"+TxtB_Password.Text+"', Student_Confirm = '"+TxtB_ConfirmPswd.Text+"' WHERE Student_Username = '"+TxtB_Username.Text+"'", con);
 
             int i = cmd.ExecuteNonQuery();
 

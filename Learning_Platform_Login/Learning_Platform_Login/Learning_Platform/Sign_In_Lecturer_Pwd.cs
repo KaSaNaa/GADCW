@@ -12,7 +12,7 @@ using System.Data.SqlClient;
 
 namespace Learning_Platform
 {
-    public partial class Sign_In_Lecturer_Pwd : Form
+    public partial class Sign_In_Lecturer_Pwd : MetroFramework.Forms.MetroForm
     {
         public Sign_In_Lecturer_Pwd()
         {
@@ -23,9 +23,9 @@ namespace Learning_Platform
         SqlCommand cmd;
         private void btn_confirm_Click(object sender, EventArgs e)
         {
-            string username = txt_username.Text;
-            string password = txt_pwd.Text;
-            string confirm_password = txt_con_pwd.Text;
+            string username = TxtB_Username.Text;
+            string password = TxtB_Password.Text;
+            string confirm_password = TxtB_ConfirmPswd.Text;
 
             try
             {
@@ -55,7 +55,7 @@ namespace Learning_Platform
 
             con = new SqlConnection("Data Source=DESKTOP-CTNVSJ1;Initial Catalog=Sign_Up_Details;Integrated Security=True");
             con.Open();
-            cmd = new SqlCommand("UPDATE Lecturer SET Lecturer_Password = '" + txt_pwd.Text + "', Lecturer_Confirm = '" + txt_con_pwd.Text + "' WHERE Lecturer_Username = '" + txt_username.Text + "'", con);
+            cmd = new SqlCommand("UPDATE Lecturer SET Lecturer_Password = '" + TxtB_Password.Text + "', Lecturer_Confirm = '" + TxtB_ConfirmPswd.Text + "' WHERE Lecturer_Username = '" + TxtB_Username.Text + "'", con);
 
             int i = cmd.ExecuteNonQuery();
 
@@ -71,6 +71,10 @@ namespace Learning_Platform
 
             con.Close();
         }
-    
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

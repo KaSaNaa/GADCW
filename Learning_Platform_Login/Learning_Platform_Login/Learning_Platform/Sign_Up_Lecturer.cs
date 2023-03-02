@@ -15,7 +15,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
 
 namespace Learning_Platform
 {
-    public partial class Sign_Up_Lecturer : Form
+    public partial class Sign_Up_Lecturer : MetroFramework.Forms.MetroForm
     {
         public Sign_Up_Lecturer()
         {
@@ -24,46 +24,46 @@ namespace Learning_Platform
 
         private void Sign_Up_Lecturer_Load(object sender, EventArgs e)
         {
-            btn_create.Visible = false;
+            Btn_CreateAcc.Visible = false;
         }
 
         SqlConnection con;
         SqlCommand cmd;
         private void btn_create_Click(object sender, EventArgs e)
         {
-            string fname = txt_fname.Text;
-            string lname = txt_lname.Text;
-            string email = txt_mail.Text;
-            string username = txt_username.Text;
-            string password = txt_pwd.Text;
-            string confirm_password = txt_con_pwd.Text;
-            DateTime dob = dobPicker.Value;
+            string fname = TxtB_Fname.Text;
+            string lname = TxtB_Lname.Text;
+            string email = TxtB_Email.Text;
+            string username = TxtB_Username.Text;
+            string password = TxtB_Password.Text;
+            string confirm_password = TxtB_ConfirmPswd.Text;
+            DateTime dob = BirthDatePicker.Value;
 
             try
             {
-                if (string.IsNullOrEmpty(fname) || txt_fname.Text.Any(char.IsDigit))
+                if (string.IsNullOrEmpty(fname) || TxtB_Fname.Text.Any(char.IsDigit))
                 {
                     MessageBox.Show("Please enter your first name which cannot have numbers.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
-                else if (string.IsNullOrEmpty(lname) || txt_fname.Text.Any(char.IsDigit))
+                else if (string.IsNullOrEmpty(lname) || TxtB_Fname.Text.Any(char.IsDigit))
                 {
                     MessageBox.Show("Please enter your last name which cannot have numbers.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
-                else if (txt_mail.Text.Length == 0)
+                else if (TxtB_Email.Text.Length == 0)
                 {
                     MessageBox.Show("Please enter your email address.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    txt_mail.Focus();
+                    TxtB_Email.Focus();
                     return;
                 }
 
-                else if (!Regex.IsMatch(txt_mail.Text, @"^[a-zA-Z][\w\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$"))
+                else if (!Regex.IsMatch(TxtB_Email.Text, @"^[a-zA-Z][\w\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$"))
                 {
                     MessageBox.Show("Please enter your valid email address. Eg:name@gmail.com", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    txt_mail.Focus();
+                    TxtB_Email.Focus();
                 }
 
                 else if (string.IsNullOrEmpty(password))
@@ -87,7 +87,7 @@ namespace Learning_Platform
 
             con = new SqlConnection("Data Source=DESKTOP-CTNVSJ1;Initial Catalog=Sign_Up_Details;Integrated Security=True");
             con.Open();
-            cmd = new SqlCommand("Insert into Lecturer values ('" + txt_fname.Text + "', '" + txt_lname.Text + "', '" + txt_mail.Text + "', '" + txt_username.Text + "', '" + txt_pwd.Text + "', '" + txt_con_pwd.Text + "', '" + dobPicker.Value + "')", con);
+            cmd = new SqlCommand("Insert into Lecturer values ('" + TxtB_Fname.Text + "', '" + TxtB_Lname.Text + "', '" + TxtB_Email.Text + "', '" + TxtB_Username.Text + "', '" + TxtB_Password.Text + "', '" + TxtB_ConfirmPswd.Text + "', '" + BirthDatePicker.Value + "')", con);
 
             int i = cmd.ExecuteNonQuery();
 
@@ -107,27 +107,27 @@ namespace Learning_Platform
 
         private void check_norms_CheckedChanged(object sender, EventArgs e)
         {
-            if (check_norms.Checked)
+            if (CheckBox_Terms.Checked)
             {
-                btn_create.Visible = true;
+                Btn_CreateAcc.Visible = true;
             }
             else
             {
-                btn_create.Visible = false;
+                Btn_CreateAcc.Visible = false;
             }
 
-            txt_fname.Enabled = !check_norms.Checked;
-            txt_lname.Enabled = !check_norms.Checked;
-            txt_mail.Enabled = !check_norms.Checked;
-            txt_username.Enabled = !check_norms.Checked;
-            dobPicker.Enabled = !check_norms.Checked;
-            txt_pwd.Enabled = !check_norms.Checked;
-            txt_con_pwd.Enabled = !check_norms.Checked;
+            TxtB_Fname.Enabled = !CheckBox_Terms.Checked;
+            TxtB_Lname.Enabled = !CheckBox_Terms.Checked;
+            TxtB_Email.Enabled = !CheckBox_Terms.Checked;
+            TxtB_Username.Enabled = !CheckBox_Terms.Checked;
+            BirthDatePicker.Enabled = !CheckBox_Terms.Checked;
+            TxtB_Password.Enabled = !CheckBox_Terms.Checked;
+            TxtB_ConfirmPswd.Enabled = !CheckBox_Terms.Checked;
         }
 
         private void check_norms_CheckedChanged_1(object sender, EventArgs e)
         {
-            this.check_norms.CheckedChanged += new System.EventHandler(this.check_norms_CheckedChanged);
+            this.CheckBox_Terms.CheckedChanged += new System.EventHandler(this.check_norms_CheckedChanged);
 
         }
     }

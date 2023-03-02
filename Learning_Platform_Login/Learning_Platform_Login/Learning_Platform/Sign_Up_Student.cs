@@ -15,7 +15,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
 
 namespace Learning_Platform
 {
-    public partial class Sign_Up_Student : Form
+    public partial class Sign_Up_Student : MetroFramework.Forms.MetroForm
     {
         public Sign_Up_Student()
         {
@@ -26,45 +26,49 @@ namespace Learning_Platform
         SqlCommand cmd;
         private void Sign_Up_Student_Load(object sender, EventArgs e)
         {
-            btn_create.Visible = false;
+            Btn_CreateAcc.Visible = false;
         }
 
-        private void btn_create_Click(object sender, EventArgs e)
+        private void TxtB_Fname_Click(object sender, EventArgs e)
         {
 
-            var fname = txt_fname.Text;
-            var lname = txt_lname.Text;
-            var email = txt_mail.Text;
-            var username = txt_username.Text;
-            var password = txt_pwd.Text;
-            var confirm_password = txt_con_pwd.Text;
-            var dob = dobPicker.Value;
+        }
+
+        private void Btn_CreateAcc_Click(object sender, EventArgs e)
+        {
+            var fname = TxtB_Fname.Text;
+            var lname = TxtB_Lname.Text;
+            var email = TxtB_Email.Text;
+            var username = TxtB_Username.Text;
+            var password = TxtB_Password.Text;
+            var confirm_password = TxtB_ConfirmPswd.Text;
+            var dob = BirthDatePicker.Value;
 
             try
             {
-                if (string.IsNullOrEmpty(fname) || txt_fname.Text.Any(char.IsDigit))
+                if (string.IsNullOrEmpty(fname) || TxtB_Fname.Text.Any(char.IsDigit))
                 {
                     MessageBox.Show("Please enter your first name which cannot have numbers.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
-                else if (string.IsNullOrEmpty(lname) || txt_fname.Text.Any(char.IsDigit))
+                else if (string.IsNullOrEmpty(lname) || TxtB_Fname.Text.Any(char.IsDigit))
                 {
                     MessageBox.Show("Please enter your last name which cannot have numbers.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
-                else if(txt_mail.Text.Length == 0)
+                else if (TxtB_Email.Text.Length == 0)
                 {
                     MessageBox.Show("Please enter your email address.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    txt_mail.Focus();
+                    TxtB_Email.Focus();
                     return;
                 }
 
-                else if(!Regex.IsMatch(txt_mail.Text, @"^[a-zA-Z][\w\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$"))
+                else if (!Regex.IsMatch(TxtB_Email.Text, @"^[a-zA-Z][\w\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$"))
                 {
                     MessageBox.Show("Please enter your valid email address. Eg:name@gmail.com", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    txt_mail.Focus();
+                    TxtB_Email.Focus();
                 }
 
                 else if (string.IsNullOrEmpty(username))
@@ -94,11 +98,11 @@ namespace Learning_Platform
 
             con = new SqlConnection("Data Source=DESKTOP-CTNVSJ1;Initial Catalog=Sign_Up_Details;Integrated Security=True");
             con.Open();
-            cmd = new SqlCommand("Insert into Student values ('"+txt_fname.Text+"', '"+txt_lname.Text+"', '"+txt_mail.Text+"', '"+txt_username.Text+"', '"+txt_pwd.Text+"', '"+txt_con_pwd.Text+"', '"+dobPicker.Value+"')", con);
+            cmd = new SqlCommand("Insert into Student values ('" + TxtB_Fname.Text + "', '" + TxtB_Lname.Text + "', '" + TxtB_Email.Text + "', '" + TxtB_Username.Text + "', '" + TxtB_Password.Text + "', '" + TxtB_ConfirmPswd.Text + "', '" + BirthDatePicker.Value + "')", con);
 
             int i = cmd.ExecuteNonQuery();
 
-            if(i == 1)
+            if (i == 1)
             {
                 MessageBox.Show("Account is sucessfully created", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -109,27 +113,30 @@ namespace Learning_Platform
             }
 
             con.Close();
-
         }
 
-        private void check_rules_CheckedChanged(object sender, EventArgs e)
+        private void CheckBox_Terms_CheckedChanged(object sender, EventArgs e)
         {
-            if (check_norms.Checked)
+            if (CheckBox_Terms.Checked)
             {
-                btn_create.Visible = true;
+                Btn_CreateAcc.Visible = true;
             }
             else
             {
-                btn_create.Visible = false;
+                Btn_CreateAcc.Visible = false;
             }
 
-            txt_fname.Enabled = !check_norms.Checked;
-            txt_lname.Enabled = !check_norms.Checked;
-            txt_mail.Enabled = !check_norms.Checked;
-            txt_username.Enabled = !check_norms.Checked;
-            dobPicker.Enabled = !check_norms.Checked;
-            txt_pwd.Enabled = !check_norms.Checked;
-            txt_con_pwd.Enabled = !check_norms.Checked;
+            TxtB_Fname.Enabled = !CheckBox_Terms.Checked;
+            TxtB_Lname.Enabled = !CheckBox_Terms.Checked;
+            TxtB_Email.Enabled = !CheckBox_Terms.Checked;
+            TxtB_Username.Enabled = !CheckBox_Terms.Checked;
+            BirthDatePicker.Enabled = !CheckBox_Terms.Checked;
+            TxtB_Password.Enabled = !CheckBox_Terms.Checked;
+            TxtB_ConfirmPswd.Enabled = !CheckBox_Terms.Checked;
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
 
         }
     }

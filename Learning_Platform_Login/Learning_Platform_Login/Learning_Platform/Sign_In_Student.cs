@@ -13,7 +13,7 @@ using System.Net.NetworkInformation;
 
 namespace Learning_Platform
 {
-    public partial class Sign_In_Student : Form
+    public partial class Sign_In_Student : MetroFramework.Forms.MetroForm
     {
         public Sign_In_Student()
         {
@@ -21,14 +21,21 @@ namespace Learning_Platform
         }
         private void Sign_In_Student_Load(object sender, EventArgs e)
         {
-            txt_pwd.UseSystemPasswordChar = true;
+            TxtB_Password.UseSystemPasswordChar = true;
         }
-        private void btn_login_Click(object sender, EventArgs e)
+
+        private void Link_ForgotPswd_Click(object sender, EventArgs e)
+        {
+            Sign_In_Student_Pwd obj = new Sign_In_Student_Pwd();
+            obj.ShowDialog();
+        }
+
+        private void Btn_Login_Click_1(object sender, EventArgs e)
         {
             try
             {
-                string username = txt_name.Text;
-                string password = txt_pwd.Text;
+                string username = TxtB_Username.Text;
+                string password = TxtB_Password.Text;
 
                 if (string.IsNullOrEmpty(username) && string.IsNullOrEmpty(password))
                 {
@@ -39,7 +46,7 @@ namespace Learning_Platform
                 SqlConnection con = new SqlConnection("Data Source=DESKTOP-CTNVSJ1;Initial Catalog=Sign_Up_Details;Integrated Security=True");
                 con.Open();
 
-                SqlCommand cmd = new SqlCommand("SELECT * FROM Student WHERE Student_Username = '" + txt_name.Text + "' AND Student_Password = '" + txt_pwd.Text + "'", con);
+                SqlCommand cmd = new SqlCommand("SELECT * FROM Student WHERE Student_Username = '" + TxtB_Username.Text + "' AND Student_Password = '" + TxtB_Password.Text + "'", con);
 
                 SqlDataReader reader = cmd.ExecuteReader();
 
@@ -59,26 +66,19 @@ namespace Learning_Platform
                 con.Close();
             }
 
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-
         }
 
-        private void btn_account_Click(object sender, EventArgs e)
+        private void Btn_CreateAcc_Click(object sender, EventArgs e)
         {
             Sign_Up_Student obj = new Sign_Up_Student();
             obj.ShowDialog();
         }
 
-        private void link_forgot_pwd_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Sign_In_Student_Pwd obj = new Sign_In_Student_Pwd();
-            obj.ShowDialog();
-        }
-
-        private void btn_back_user_Click(object sender, EventArgs e)
+        private void Link_BackButton_Click(object sender, EventArgs e)
         {
             User_Type obj = new User_Type();
             obj.ShowDialog();

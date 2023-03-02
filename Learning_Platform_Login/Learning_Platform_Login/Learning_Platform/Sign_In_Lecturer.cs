@@ -8,33 +8,35 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroFramework;
 
 namespace Learning_Platform
 {
-    public partial class Sign_In_Lecturer : Form
+    public partial class Sign_In_Lecturer : MetroFramework.Forms.MetroForm
     {
         public Sign_In_Lecturer()
         {
             InitializeComponent();
+            ControlBox = false;
         }
 
         private void Sign_In_Lecturer_Load(object sender, EventArgs e)
         {
-            txt_pwd.UseSystemPasswordChar = true;
+            TxtB_Password.UseSystemPasswordChar = true;
         }
 
-        private void link_forgot_pwd_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void Link_BackButton_Click(object sender, EventArgs e)
         {
-            Sign_In_Lecturer_Pwd obj = new Sign_In_Lecturer_Pwd();
+            User_Type obj = new User_Type();
             obj.ShowDialog();
         }
 
-        private void btn_login_Click(object sender, EventArgs e)
+        private void Btn_Login_Click_1(object sender, EventArgs e)
         {
             try
             {
-                string username = txt_name.Text;
-                string password = txt_pwd.Text;
+                string username = TxtB_Username.Text;
+                string password = TxtB_Password.Text;
 
                 if (string.IsNullOrEmpty(username) && string.IsNullOrEmpty(password))
                 {
@@ -45,7 +47,7 @@ namespace Learning_Platform
                 SqlConnection con = new SqlConnection("Data Source=DESKTOP-CTNVSJ1;Initial Catalog=Sign_Up_Details;Integrated Security=True");
                 con.Open();
 
-                SqlCommand cmd = new SqlCommand("SELECT * FROM Lecturer WHERE Lecturer_Username = '" + txt_name.Text + "' AND Lecturer_Password = '" + txt_pwd.Text + "'", con);
+                SqlCommand cmd = new SqlCommand("SELECT * FROM Lecturer WHERE Lecturer_Username = '" + TxtB_Username.Text + "' AND Lecturer_Password = '" + TxtB_Password.Text + "'", con);
 
                 SqlDataReader reader = cmd.ExecuteReader();
 
@@ -65,21 +67,21 @@ namespace Learning_Platform
                 con.Close();
             }
 
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                MessageBox.Show("Please try again", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message);
             }
         }
 
-        private void btn_account_Click(object sender, EventArgs e)
+        private void Link_ForgotPswd_Click(object sender, EventArgs e)
         {
-            Sign_Up_Lecturer obj = new Sign_Up_Lecturer();
+            Sign_In_Lecturer_Pwd obj = new Sign_In_Lecturer_Pwd();
             obj.ShowDialog();
         }
 
-        private void btn_back_user_Click(object sender, EventArgs e)
+        private void Btn_CreateAcc_Click(object sender, EventArgs e)
         {
-            User_Type obj = new User_Type();
+            Sign_Up_Lecturer obj = new Sign_Up_Lecturer();
             obj.ShowDialog();
         }
     }
