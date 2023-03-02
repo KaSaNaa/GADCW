@@ -39,13 +39,13 @@ namespace Online_Evaluation_System.Lecturer_usercontrols
         {
                 if (cmb_activity.SelectedIndex != 0)
                 {
-                    query = "select qno,question,option1,option2,option3,option4,ans from Questions where activity = '" + cmb_activity.Text + "'";
+                    query = "select id,qno,question,option1,option2,option3,option4,ans from Questions where activity = '" + cmb_activity.Text + "'";
                     DataSet ds = fn.getData(query);
                     dataGridView1.DataSource = ds.Tables[0];
                 }
                 else
                 {
-                    query = "select qno,question,option1,option2,option3,option4,ans from Questions";
+                    query = "select id,qno,question,option1,option2,option3,option4,ans from Questions";
                     DataSet ds = fn.getData(query);
                     dataGridView1.DataSource = ds.Tables[0];
                 }
@@ -56,6 +56,7 @@ namespace Online_Evaluation_System.Lecturer_usercontrols
         {
             try
             {
+
                 id = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
                 questionNO = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString());
             }
@@ -67,6 +68,7 @@ namespace Online_Evaluation_System.Lecturer_usercontrols
 
         private void btn_refresh_Click(object sender, EventArgs e)
         {
+            dataGridView1.DataSource = null;
             View_DeleteQuestion_Load(this, null);
         }
 
@@ -76,8 +78,10 @@ namespace Online_Evaluation_System.Lecturer_usercontrols
             {
                 if (MessageBox.Show("Are you sure?", "Delete Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
-                    query = "delete from Questions where id = " + id + " and qno = '" + questionNO + "'";
+                    query = "delete from Questions where id = "+id+" and qno = " + questionNO + "";
                     fn.setData(query, "Question deleted");
+
+                    dataGridView1.DataSource = null;
                     View_DeleteQuestion_Load(this, null);
                 }
             }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -36,6 +37,7 @@ namespace Online_Evaluation_System.Lecturer_usercontrols
         private void AddNewQuestion_Load(object sender, EventArgs e)
         {
             query = "select max(activity) from Questions";
+
             ds = fn.getData(query);
             if (ds.Tables[0].Rows.Count != 0 && ds.Tables[0].Rows[0][0].ToString()!="")
             {
@@ -59,14 +61,14 @@ namespace Online_Evaluation_System.Lecturer_usercontrols
         private void btn_next_Click(object sender, EventArgs e)
         {
 
-                String activity = txt_activity.Text;
-                String qno = questionNo.ToString();
-                String question = txt_question.Text;
-                String option1 = txt_option1.Text;
-                String option2 = txt_option2.Text;
-                String option3 = txt_option3.Text;
-                String option4 = txt_option4.Text;
-                String ans = txt_answer.Text;
+            String activity = txt_activity.Text;
+            String qno = questionNo.ToString();
+            String question = txt_question.Text;
+            String option1 = txt_option1.Text;
+            String option2 = txt_option2.Text;
+            String option3 = txt_option3.Text;
+            String option4 = txt_option4.Text;
+            String ans = txt_answer.Text;
 
             query = "select * from Questions where activity = '" + activity + "' and question = '" + question + "' and option1 = '" + option1 + "' and option2 = '" + option2 + "' and option3 = '" + option3 + "' and option4 = '" + option4 + "' and ans = '" + ans + "'";
             ds = fn.getData(query);
@@ -98,13 +100,14 @@ namespace Online_Evaluation_System.Lecturer_usercontrols
             }
 
             query = "insert into Questions(activity, qno, question, option1, option2, option3, option4, ans) values('" + activity + "','" + qno + "','" + question + "','" + option1 + "','" + option2 + "','" + option3 + "','" + option4 + "','" + ans + "')";
-                fn.setData(query, "Question added");
+            fn.setData(query, "Question added");
 
-                clearAll();
-                questionNo++;
-                lbl_questionNo.Text = questionNo.ToString();
-            
+            clearAll();
+            questionNo++;
+            lbl_questionNo.Text = questionNo.ToString();
+
         }
+
 
         public void clearAll()
         {
