@@ -17,5 +17,43 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        public string FirstName
+        {
+            get { return txt_fname.Text; }
+            set { txt_fname.Text = value; }
+        }
+
+        public string LastName
+        {
+            get { return txt_lname.Text; }
+            set { txt_lname.Text = value; }
+        }
+
+        public string Email
+        {
+            get { return txt_mail.Text; }
+            set { txt_mail.Text = value; }
+        }
+
+        public string Course
+        {
+            get { return txt_course.Text; }
+            set { txt_course.Text = value; }
+        }
+
+        public string Username
+        {
+            get { return txt_username.Text; }
+            set { txt_username.Text = value; }
+        }
+
+        public string Password
+        {
+            get { return txt_pwd.Text; }
+            set { txt_pwd.Text = value; }
+        }
+
+
     }
 }

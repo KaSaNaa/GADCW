@@ -53,8 +53,14 @@ namespace WindowsFormsApp1.UserControls
                 if (reader.HasRows)
                 {
                     frmMain.Instance.Hide();
-                    var form = new studentDashboard();
-                    form.Show();
+                    studentDashboard obj = new studentDashboard();
+                    obj.FirstName = reader.GetString(1);
+                    obj.LastName = reader.GetString(2);
+                    obj.Email = reader.GetString(3);
+                    obj.Course = reader.GetString(4);
+                    obj.Username = reader.GetString(5);
+                    obj.Password = reader.GetString(6);
+                    obj.ShowDialog();
                 }
                 else
                 {
