@@ -23,9 +23,9 @@ namespace WindowsFormsApp1.UserControls
         {
             try
             {
-                string username = TxtB_Username.Text;
-                string password = TxtB_Password.Text;
-                char usertype = 'L';
+                var username = TxtB_Username.Text;
+                var password = TxtB_Password.Text;
+                var usertype = 'L';
 
                 if (string.IsNullOrEmpty(username) && string.IsNullOrEmpty(password))
                 {
@@ -34,24 +34,35 @@ namespace WindowsFormsApp1.UserControls
                 }
                 con.Open();
 
-                SqlCommand cmd = new SqlCommand("SELECT * FROM Users WHERE UserID = '" + TxtB_Username.Text + "' AND Password = '" + TxtB_Password.Text + "' AND Usertype = '"+ usertype +"'", con);
+                SqlCommand cmd = new SqlCommand("SELECT * FROM Users WHERE UserID = @UserId AND Password = @Password AND Usertype = @UserType", con);
 
-                SqlDataReader reader = cmd.ExecuteReader();
+                cmd.Parameters.AddWithValue("@UserId", TxtB_Username.Text);
+                cmd.Parameters.AddWithValue("@Password", TxtB_Password.Text);
+                cmd.Parameters.AddWithValue("@UserType", usertype);
 
-                // check if there is a matching record in the database
+                var reader = cmd.ExecuteReader();
                 if (reader.HasRows)
                 {
+                    reader.Close();
+                    SqlCommand cmd1 = new SqlCommand("SELECT FirstName FROM Users WHERE UserID = @UserId", con);
+                    cmd1.Parameters.AddWithValue("@UserId", TxtB_Username.Text);
+                    var firstnameReader = cmd1.ExecuteReader();
+                    string firstname = "";
+                    if (firstnameReader.Read())
+                    {
+                        firstname = firstnameReader.GetString(0);
+                    }
+                    firstnameReader.Close();
                     frmMain.Instance.Hide();
-                    var form = new studentDashboard();
-                    form.Show();
+                    var obj = new studentDashboard();
+                    obj.SetUsernameLabel(firstname);
+                    obj.ShowDialog();
                 }
                 else
                 {
                     MessageBox.Show("Invalid username or password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
-                // close the reader and the connection
-                reader.Close();
                 con.Close();
             }
 

@@ -169,5 +169,105 @@ namespace WindowsFormsApp1
         {
             
         }
+
+        private void BirthDatePicker_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroTextBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtB_Email_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroTextBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroTextBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtB_Lname_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtB_Fname_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroTextBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroTextBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroDateTime1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

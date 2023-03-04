@@ -13,6 +13,11 @@ namespace WindowsFormsApp1
 {
     public partial class studentDashboard : MetroForm
     {
+        public void SetUsernameLabel(string fname)
+        {
+            txt_fname.Text = "Welcome, " + fname;
+        }
+
         public studentDashboard()
         {
             InitializeComponent();
@@ -20,40 +25,49 @@ namespace WindowsFormsApp1
 
         public string FirstName
         {
-            get { return txt_fname.Text; }
-            set { txt_fname.Text = value; }
+            get => txt_fname.Text;
+            set => txt_fname.Text = value;
         }
 
         public string LastName
         {
-            get { return txt_lname.Text; }
-            set { txt_lname.Text = value; }
+            get => txt_lname.Text;
+            set => txt_lname.Text = value;
         }
 
         public string Email
         {
-            get { return txt_mail.Text; }
-            set { txt_mail.Text = value; }
+            get => txt_mail.Text;
+            set => txt_mail.Text = value;
         }
 
         public string Course
         {
-            get { return txt_course.Text; }
-            set { txt_course.Text = value; }
+            get => txt_course.Text;
+            set => txt_course.Text = value;
         }
 
         public string Username
         {
-            get { return txt_username.Text; }
-            set { txt_username.Text = value; }
+            get => txt_username.Text;
+            set => txt_username.Text = value;
         }
 
         public string Password
         {
-            get { return txt_pwd.Text; }
-            set { txt_pwd.Text = value; }
+            get => txt_pwd.Text;
+            set => txt_pwd.Text = value;
         }
 
+        private void studentDashboard_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'learningPlatformDataSet.Users' table. You can move, or remove it, as needed. 
+            tabDashboard.Focus();
+        }
 
+        private void tabDashboard_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
