@@ -43,6 +43,7 @@
             this.tabSettings = new MetroFramework.Controls.MetroTabPage();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.tabLogout = new MetroFramework.Controls.MetroTabPage();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.tabControl.SuspendLayout();
             this.tabDashboard.SuspendLayout();
             this.tabSettings.SuspendLayout();
@@ -70,11 +71,6 @@
             // 
             // tabDashboard
             // 
-            this.tabDashboard.Controls.Add(this.txt_pwd);
-            this.tabDashboard.Controls.Add(this.txt_mail);
-            this.tabDashboard.Controls.Add(this.txt_username);
-            this.tabDashboard.Controls.Add(this.txt_course);
-            this.tabDashboard.Controls.Add(this.txt_lname);
             this.tabDashboard.Controls.Add(this.txt_fname);
             this.tabDashboard.HorizontalScrollbarBarColor = true;
             this.tabDashboard.HorizontalScrollbarHighlightOnWheel = false;
@@ -95,7 +91,7 @@
             this.txt_pwd.AutoSize = true;
             this.txt_pwd.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.txt_pwd.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.txt_pwd.Location = new System.Drawing.Point(689, 166);
+            this.txt_pwd.Location = new System.Drawing.Point(798, 32);
             this.txt_pwd.Name = "txt_pwd";
             this.txt_pwd.Size = new System.Drawing.Size(117, 25);
             this.txt_pwd.TabIndex = 2;
@@ -107,7 +103,7 @@
             this.txt_mail.AutoSize = true;
             this.txt_mail.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.txt_mail.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.txt_mail.Location = new System.Drawing.Point(376, 166);
+            this.txt_mail.Location = new System.Drawing.Point(485, 32);
             this.txt_mail.Name = "txt_mail";
             this.txt_mail.Size = new System.Drawing.Size(117, 25);
             this.txt_mail.TabIndex = 2;
@@ -119,7 +115,7 @@
             this.txt_username.AutoSize = true;
             this.txt_username.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.txt_username.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.txt_username.Location = new System.Drawing.Point(587, 166);
+            this.txt_username.Location = new System.Drawing.Point(696, 32);
             this.txt_username.Name = "txt_username";
             this.txt_username.Size = new System.Drawing.Size(117, 25);
             this.txt_username.TabIndex = 2;
@@ -131,7 +127,7 @@
             this.txt_course.AutoSize = true;
             this.txt_course.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.txt_course.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.txt_course.Location = new System.Drawing.Point(479, 166);
+            this.txt_course.Location = new System.Drawing.Point(588, 32);
             this.txt_course.Name = "txt_course";
             this.txt_course.Size = new System.Drawing.Size(117, 25);
             this.txt_course.TabIndex = 2;
@@ -143,7 +139,7 @@
             this.txt_lname.AutoSize = true;
             this.txt_lname.FontSize = MetroFramework.MetroLabelSize.Tall;
             this.txt_lname.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.txt_lname.Location = new System.Drawing.Point(258, 166);
+            this.txt_lname.Location = new System.Drawing.Point(367, 32);
             this.txt_lname.Name = "txt_lname";
             this.txt_lname.Size = new System.Drawing.Size(117, 25);
             this.txt_lname.TabIndex = 2;
@@ -227,6 +223,7 @@
             // 
             // tabSettings
             // 
+            this.tabSettings.Controls.Add(this.metroButton1);
             this.tabSettings.Controls.Add(this.metroLabel2);
             this.tabSettings.HorizontalScrollbarBarColor = true;
             this.tabSettings.HorizontalScrollbarHighlightOnWheel = false;
@@ -270,12 +267,28 @@
             this.tabLogout.VerticalScrollbarHighlightOnWheel = false;
             this.tabLogout.VerticalScrollbarSize = 10;
             // 
+            // metroButton1
+            // 
+            this.metroButton1.Location = new System.Drawing.Point(280, 57);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(126, 23);
+            this.metroButton1.TabIndex = 3;
+            this.metroButton1.Text = "Click to upload";
+            this.metroButton1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
+            // 
             // studentDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1350, 727);
             this.Controls.Add(this.tabControl);
+            this.Controls.Add(this.txt_course);
+            this.Controls.Add(this.txt_pwd);
+            this.Controls.Add(this.txt_lname);
+            this.Controls.Add(this.txt_mail);
+            this.Controls.Add(this.txt_username);
             this.Name = "studentDashboard";
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.Load += new System.EventHandler(this.studentDashboard_Load);
@@ -285,6 +298,7 @@
             this.tabSettings.ResumeLayout(false);
             this.tabSettings.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -305,5 +319,6 @@
         private MetroFramework.Controls.MetroLabel txt_course;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroTabPage tabLogout;
+        private MetroFramework.Controls.MetroButton metroButton1;
     }
 }

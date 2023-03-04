@@ -259,6 +259,12 @@
     <Compile Include="studentDashboard.Designer.cs">
       <DependentUpon>studentDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="uploadDP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uploadDP.Designer.cs">
+      <DependentUpon>uploadDP.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ucLecturerSignIn.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -294,6 +300,9 @@
     </Compile>
     <EmbeddedResource Include="studentDashboard.resx">
       <DependentUpon>studentDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uploadDP.resx">
+      <DependentUpon>uploadDP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucLecturerSignIn.resx">
       <DependentUpon>ucLecturerSignIn.cs</DependentUpon>

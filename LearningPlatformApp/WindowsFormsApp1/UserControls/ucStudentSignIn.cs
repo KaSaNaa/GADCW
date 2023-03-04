@@ -42,7 +42,7 @@ namespace WindowsFormsApp1.UserControls
 
                 SqlCommand cmd = new SqlCommand("SELECT * FROM Users WHERE UserID = @UserId AND Password = @Password AND Usertype = @UserType", con);
                 
-                cmd.Parameters.AddWithValue("@UserId", TxtB_Username.Text);
+                cmd.Parameters.AddWithValue("@UserId", Convert.ToInt32(TxtB_Username.Text));
                 cmd.Parameters.AddWithValue("@Password", TxtB_Password.Text);
                 cmd.Parameters.AddWithValue("@UserType", usertype);
 
@@ -50,18 +50,23 @@ namespace WindowsFormsApp1.UserControls
                 if (reader.HasRows)
                 {
                     reader.Close();
-                    SqlCommand cmd1 = new SqlCommand("SELECT FirstName FROM Users WHERE UserID = @UserId", con);
-                    cmd1.Parameters.AddWithValue("@UserId", TxtB_Username.Text);
+                    SqlCommand cmd1 = new SqlCommand("SELECT UserID, FirstName, LastName, Email FROM Users WHERE UserID = @UserId", con);
+                    cmd1.Parameters.AddWithValue("@UserId", Convert.ToInt32(TxtB_Username.Text));
                     var firstnameReader = cmd1.ExecuteReader();
-                    string firstname = "";
+                    string firstname ="", userid, lname, email;
+
                     if (firstnameReader.Read())
                     {
-                        firstname = firstnameReader.GetString(0);
+                        userid = Convert.ToString(firstnameReader.GetString(0));
+                        firstname = firstnameReader.GetString(1);
+                        lname = firstnameReader.GetString(2);
+                        email = firstnameReader.GetString(3);
                     }
                     firstnameReader.Close();
                     frmMain.Instance.Hide();
                     var obj = new studentDashboard();
-                    obj.SetUsernameLabel(firstname);
+                    obj.SetFirstnameLabel(firstname);
+
                     obj.ShowDialog();
                 }
                 else

@@ -55,7 +55,7 @@ namespace WindowsFormsApp1.UserControls
                     firstnameReader.Close();
                     frmMain.Instance.Hide();
                     var obj = new studentDashboard();
-                    obj.SetUsernameLabel(firstname);
+                    obj.SetFirstnameLabel(firstname);
                     obj.ShowDialog();
                 }
                 else

@@ -13,9 +13,24 @@ namespace WindowsFormsApp1
 {
     public partial class studentDashboard : MetroForm
     {
-        public void SetUsernameLabel(string fname)
+        public void SetFirstnameLabel(string fname)
         {
-            txt_fname.Text = "Welcome, " + fname;
+            txt_username.Text = "Welcome, " + fname;
+        }
+
+        public void SetFirstName(string fname)
+        {
+            txt_fname.Text = fname;
+        }
+
+        public void SetLastName(string lname)
+        {
+            txt_lname.Text = lname;
+        }
+
+        public void SetEmailAddress(string email)
+        {
+            txt_mail.Text = email;
         }
 
         public studentDashboard()
@@ -63,11 +78,22 @@ namespace WindowsFormsApp1
         {
             // TODO: This line of code loads data into the 'learningPlatformDataSet.Users' table. You can move, or remove it, as needed. 
             tabDashboard.Focus();
+            txt_fname.Visible = false;
+            txt_course.Visible = false;
+            txt_lname.Visible = false;
+            txt_mail.Visible = false;
+            txt_username.Visible = false;
         }
 
         private void tabDashboard_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            uploadDP dp = new uploadDP();
+            dp.ShowDialog();
         }
     }
 }
