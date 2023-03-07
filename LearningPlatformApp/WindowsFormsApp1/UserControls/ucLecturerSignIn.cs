@@ -44,25 +44,35 @@ namespace WindowsFormsApp1.UserControls
                 if (reader.HasRows)
                 {
                     reader.Close();
-                    SqlCommand cmd1 = new SqlCommand("SELECT FirstName FROM Users WHERE UserID = @UserId", con);
+                    SqlCommand cmd1 = new SqlCommand("SELECT UserID, FirstName, LastName, Email FROM Users WHERE UserID = @UserId", con);
                     cmd1.Parameters.AddWithValue("@UserId", TxtB_Username.Text);
                     var firstnameReader = cmd1.ExecuteReader();
-                    string firstname = "";
+                    string firstname = "", lname = "", email = "";
+                    int userid = 0;
+
                     if (firstnameReader.Read())
                     {
-                        firstname = firstnameReader.GetString(0);
+                        userid = firstnameReader.GetInt32(0);
+                        firstname = firstnameReader.GetString(1);
+                        lname = firstnameReader.GetString(2);
+                        email = firstnameReader.GetString(3);
                     }
                     firstnameReader.Close();
                     frmMain.Instance.Hide();
-                    var obj = new studentDashboard();
+                    var obj = new Dashboard();
+
                     obj.SetFirstnameLabel(firstname);
+                    obj.SetLastName(lname);
+                    obj.SetEmailAddress(email);
+                    obj.SetUserName(userid);
+                    obj.SetUserType(Convert.ToString(usertype));
+
                     obj.ShowDialog();
                 }
                 else
                 {
                     MessageBox.Show("Invalid username or password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
                 con.Close();
             }
 

@@ -24,8 +24,6 @@ namespace WindowsFormsApp1
                 "Data Source=DESKTOP-LC7RQ4G;Initial Catalog=LearningPlatform;Integrated Security=True");
         }
 
-        
-
         private void metroButton1_Click(object sender, EventArgs e)
         {
             if (imageBytes == null)
@@ -36,12 +34,11 @@ namespace WindowsFormsApp1
             try
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("INSERT INTO UserProfilePic(ID, UserID, ImageData) VALUES(@ID, @UserID, @ImageData)", con);
-                cmd.Parameters.AddWithValue("@ID", 1); //set your own ID value
-                cmd.Parameters.AddWithValue("@UserID", 1); //set your own UserID value
+                SqlCommand cmd = new SqlCommand("INSERT INTO UserProfilePic(UserID, ImageData) VALUES(@UserID, @ImageData)", con);
+                cmd.Parameters.AddWithValue("@UserID",1); //set your own UserID value
                 cmd.Parameters.AddWithValue("@ImageData", imageBytes);
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("Image uploaded successfully!");
+                MetroFramework.MetroMessageBox.Show(this, "Successful", "Image uploaded successfully!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
